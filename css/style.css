@@ -157,6 +157,13 @@ body {
   position: relative;
   width: 400px;
   height: 360px;
+  filter: grayscale(100%);
+  transition: all .2s ease-in;
+  
+}
+.portfolio-list li img:hover{
+  transform: scale(1.1);
+  filter: grayscale(0)
 }
 .portfolio-list li > a{
   
