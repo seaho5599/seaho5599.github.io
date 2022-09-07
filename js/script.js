@@ -17,6 +17,8 @@ $(document).ready(function (){
       cursoropacitymax: 0.7,
     });
   });
-
-
+  $('.counter').counterUp({
+    delay: 10,
+    time: 1000
+});
 })
