@@ -44,6 +44,7 @@
   <script src="js/aos/aos.js"></script>
   <script type="text/javascript" src="js/counterup/waypoints.min.js"></script>
   <script type="text/javascript" src="js/counterup/jquery.counterup.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
     integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -56,6 +57,11 @@
 </head>
 
 <body>
+  <button class="gotop">
+    <span class="material-symbols-outlined">
+      arrow_upward
+      </span>
+  </button>
   <div class="wrap">
     <header class="header">
       <h1>logo</h1>
@@ -192,179 +198,390 @@
         <h2>Portfolio</h2>
         <div class="portfolio-wrap">
           <h3>Publshing Clone Coding</h3>
-          <div class="portfolio-cate">
-            <h4>Personal Clone</h4>
-            <ul class="portfolio-list">
-              <li data-aos="fade-up-right" data-aos-delay="0" data-aos-duration="500">
-                <a href="https://github.com/seaho5599/hanaph" target="_blank">
-                  <img src="images/하나제약주식.png" alt="http://www.hanaph.co.kr/index.do">
-                </a>
-                <div class="portfolio-dim">
+          <div class="portfolio-btn">
+            <button class="all">ALL</button>
+            <button class="personal">PERSONAL</button>
+            <button class="study">STUDY</button>
+            <button class="vue">VUE</button>
+          </div>
+          <div class="portfolio-all">
+            <div class="portfolio-wrapper">
+              <div class="protfoio-clone p-personal">
+                <div class="sw-txt">
                   <h5>하나제약주식회사(PC/Mobile)</h5>
+                  <a href="https://seaho5599.github.io/hanaph/" target="_blank">
+                    <img src="images/하나제약주식.png" alt="https://seaho5599.github.io/hanaph/">
+                  </a>
+                </div>
+                <div class="sw-btn">
                   <a href="https://seaho5599.github.io/hanaph/" target="_blank">work</a>
                   <a href="https://github.com/seaho5599/hanaph" target="_blank">github</a>
                   <a href="http://www.hanaph.co.kr/index.do" target="_blank">origin</a>
                 </div>
-              </li>
-              <li data-aos="fade-up-left" data-aos-delay="100" data-aos-duration="500">
-                <h5>정육각(PC/Mobile)</h5>
-                <a href="https://seaho5599.github.io/jeongyookgak/" target="_blank">
-                  <img src="images/정육각.png" alt="https://www.jeongyookgak.com/index">
-                </a>
-                <div>
-                  <a href="https://seaho5599.github.io/jeongyookgak/" target="_blank">work</a>
-                  <a href="https://github.com/seaho5599/jeongyookgak" target="_blank">github</a>
-                  <a href="https://www.jeongyookgak.com/index" target="_blank">origin</a>
+              </div>
+              <div class="protfoio-clone p-study">
+                <div class="sw-txt">
+                  <h5>K-Water(PC/Mobile)</h5>
+                  <a href="https://seaho5599.github.io/K-water/" target="_blank">
+                    <img src="images/k-water.png" alt="https://www.kwater.or.kr/main.do?s_mid=1">
+                  </a>
                 </div>
-              </li>
-              <li data-aos="fade-down-right" data-aos-delay="200" data-aos-duration="500">
-                <h5>도미노피자(PC/Mobile)</h5>
-                <a href="https://seaho5599.github.io/dominos/" target="_blank">
-                  <img src="images/도미노피자.png" alt="https://web.dominos.co.kr/main">
-                </a>
-                <div>
-                  <a href="https://seaho5599.github.io/dominos/" target="_blank">work</a>
-                  <a href="https://github.com/seaho5599/dominos" target="_blank">github</a>
-                  <a href="https://web.dominos.co.kr/main" target="_blank">origin</a>
-                </div>
-              </li>
-              <li data-aos="fade-down-left" data-aos-delay="300" data-aos-duration="500">
-                <h5>오설록(PC/Mobile)</h5>
-                <a href="https://seaho5599.github.io/osulloc/" target="_blank">
-                  <img src="images/오설록.png" alt="https://www.osulloc.com/kr/ko">
-                </a>
-                <div>
-                  <a href="https://seaho5599.github.io/osulloc/" target="_blank">work</a>
-                  <a href="https://github.com/seaho5599/osulloc" target="_blank">github</a>
-                  <a href="https://www.osulloc.com/kr/ko" target="_blank">origin</a>
-                </div>
-              </li>
-            </ul>
-
-          </div>
-          <div class="portfolio-cate">
-            <h4>Study Clone</h4>
-
-            <ul class="portfolio-list">
-              <li data-aos="flip-left" data-aos-delay="100" data-aos-duration="500">
-                <h5>K-Water(PC/Mobile)</h5>
-                <a href="https://seaho5599.github.io/K-water/" target="_blank">
-                  <img src="images/k-water.png" alt="https://www.kwater.or.kr/main.do?s_mid=1">
-                </a>
-                <div>
+                <div class="sw-btn">
                   <a href="https://seaho5599.github.io/K-water/" target="_blank">work</a>
                   <a href="https://github.com/seaho5599/K-water" target="_blank">github</a>
                   <a href="https://www.kwater.or.kr/main.do?s_mid=1" target="_blank">origin</a>
                 </div>
-              </li>
-              <li data-aos="flip-right" data-aos-delay="300" data-aos-duration="500">
-                <h5>거제청년이룸(PC/Mobile/Vue.js)</h5>
-                <a href="깃허브 Vue.js page주소" target="_blank">
-                  <img src="images/거제청년이룸.png" alt="https://geojeyouth.com/web/">
-                </a>
-                <div>
-                  <a href="https://seaho5599.github.io/geojeyouth/" target="_blank">work</a>
-                  <a href="https://github.com/seaho5599/geojeyouth" target="_blank">github</a>
-
-                  <a href="깃허브 Vue.js page주소" target="_blank">vue.js work</a>
-                  <a href="깃허브 Vue.js 주소" target="_blank">vue.js github</a>
-
-                  <a href="https://geojeyouth.com/web/" target="_blank">origin</a>
+              </div>
+              <div class="protfoio-clone p-personal">
+                <div class="sw-txt">
+                  <h5>정육각(PC/Mobile)</h5>
+                  <a href="https://seaho5599.github.io/jeongyookgak/" target="_blank">
+                    <img src="images/정육각.png" alt="https://www.jeongyookgak.com/index">
+                  </a>
                 </div>
-              </li>
-              <li data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="500">
-                <h5>노엘로힐스(PC/Mobile/Vue.js)</h5>
-                <a href="https://seaho5599.github.io/page-noelo/" target="_blank">
-                  <img src="images/노엘로힐스.png" alt="사이트명">
-                </a>
-                <div>
-                  <a href="https://seaho5599.github.io/noelohills/" target="_blank">work</a>
-                  <a href="https://github.com/seaho5599/noelohills" target="_blank">github</a>
-
-                  <a href="https://seaho5599.github.io/page-noelo/" target="_blank">vue.js work</a>
-                  <a href="https://github.com/seaho5599/gitnoelo" target="_blank">vue.js github</a>
-
-                  <a href="https://www.noelohills.com/?utm_source=naver&utm_medium=brandAD&utm_term=%7Bkeyword%7D&utm_content=PC2_noelo&NaPm=ct%3Dl7o6nyfk%7Cci%3D0Ae0000Eo1jxZJn7J1kO%7Ctr%3Dbrnd%7Chk%3D7831a2834ecce89c956851817de6da74a7ba18ce"
-                    target="_blank">origin</a>
+                <div class="sw-btn">
+                  <a href="https://seaho5599.github.io/jeongyookgak/" target="_blank">work</a>
+                  <a href="https://github.com/seaho5599/jeongyookgak" target="_blank">github</a>
+                  <a href="https://www.jeongyookgak.com/index" target="_blank">origin</a>
                 </div>
-              </li>
-              <li data-aos="zoom-in-down" data-aos-delay="300" data-aos-duration="500">
-                <h5>마시그래이(PC/Mobile/Vue.js)</h5>
-                <a href=" https://seaho5599.github.io/page-mashi/" target="_blank">
-                  <img src="images/마시그래이.png" alt="https://www.masigray.com:5021/main/main.asp">
-                </a>
-                <div>
+              </div>            
+              <div class="protfoio-clone p-study">
+                <div class="sw-txt">
+                  <h5>마시그래이(PC/Mobile/Vue.js)</h5>
+                  <a href=" https://seaho5599.github.io/page-mashi/" target="_blank">
+                    <img src="images/마시그래이.png" alt="https://www.masigray.com:5021/main/main.asp">
+                  </a>
+                </div>
+                <div class="sw-btn">
                   <a href="https://seaho5599.github.io/masigray/" target="_blank">work</a>
                   <a href="https://github.com/seaho5599/masigray" target="_blank">github</a>
-
                   <a href=" https://seaho5599.github.io/page-mashi/" target="_blank">vue.js work</a>
                   <a href="https://github.com/seaho5599/vuemasi" target="_blank">vue.js github</a>
-
                   <a href="https://www.masigray.com:5021/main/main.asp" target="_blank">origin</a>
                 </div>
-              </li>
-              <li data-aos="zoom-in-left" data-aos-delay="100" data-aos-duration="500">
-                <h5>STX건설(PC/Vue.js)</h5>
-                <a href="https://seaho5599.github.io/page-stx/" target="_blank">
-                  <img src="images/stx.png" alt="http://www.stxconst.co.kr/">
-                </a>
-                <div>
+              </div>
+              <div class="protfoio-clone p-personal">
+                <div class="sw-txt">
+                  <h5>도미노피자(PC/Mobile)</h5>
+                  <a href="https://seaho5599.github.io/dominos/" target="_blank">
+                    <img src="images/도미노피자.png" alt="https://web.dominos.co.kr/main">
+                  </a>
+                </div>
+                <div class="sw-btn">
+                  <a href="https://seaho5599.github.io/dominos/" target="_blank">work</a>
+                  <a href="https://github.com/seaho5599/dominos" target="_blank">github</a>
+                  <a href="https://web.dominos.co.kr/main" target="_blank">origin</a>
+                </div>
+              </div>
+              <div class="protfoio-clone p-study">
+                <div class="sw-txt">
+                  <h5>거제청년이룸(PC/Mobile/Vue.js)</h5>
+                  <a href="https://seaho5599.github.io/page-geoje/" target="_blank">
+                    <img src="images/거제청년이룸.png" alt="https://geojeyouth.com/web/">
+                  </a>
+                </div>
+                <div class="sw-btn">
+                  <a href="https://seaho5599.github.io/geojeyouth/" target="_blank">work</a>
+                  <a href="https://github.com/seaho5599/geojeyouth" target="_blank">github</a>
+                  <a href="https://seaho5599.github.io/page-geoje/" target="_blank">vue.js work</a>
+                  <a href="https://github.com/seaho5599/vue-geoje" target="_blank">vue.js github</a>
+                  <a href="https://geojeyouth.com/web/" target="_blank">origin</a>
+                </div>
+              </div>
+              <div class="protfoio-clone p-personal">
+                <div class="sw-txt">
+                  <h5>오설록(PC/Mobile)</h5>
+                  <a href="https://seaho5599.github.io/osulloc/" target="_blank">
+                    <img src="images/오설록.png" alt="https://www.osulloc.com/kr/ko">
+                  </a>
+                </div>
+                <div class="sw-btn">
+                  <a href="https://seaho5599.github.io/osulloc/" target="_blank">work</a>
+                  <a href="https://github.com/seaho5599/osulloc" target="_blank">github</a>
+                  <a href="https://www.osulloc.com/kr/ko" target="_blank">origin</a>
+                </div>
+              </div>
+              <div class="protfoio-clone p-study">
+                <div class="sw-txt">
+                  <h5>노엘로힐스(PC/Mobile/Vue.js)</h5>
+                  <a href="https://seaho5599.github.io/page-noelo/" target="_blank">
+                    <img src="images/노엘로힐스.png" alt="사이트명">
+                  </a>
+                </div>
+                <div class="sw-btn">
+                  <a href="https://seaho5599.github.io/noelohills/" target="_blank">work</a>
+                  <a href="https://github.com/seaho5599/noelohills" target="_blank">github</a>
+                  <a href="https://seaho5599.github.io/page-noelo/" target="_blank">vue.js work</a>
+                  <a href="https://github.com/seaho5599/gitnoelo" target="_blank">vue.js github</a>
+                  <a href="https://www.noelohills.com/" target="_blank">origin</a>
+                </div>
+              </div>
+              <div class="protfoio-clone p-study">
+                <div class="sw-txt">
+                  <h5>STX건설(PC/Vue.js)</h5>
+                  <a href="https://seaho5599.github.io/page-stx/" target="_blank">
+                    <img src="images/stx.png" alt="http://www.stxconst.co.kr/">
+                  </a>
+                </div>
+                <div class="sw-btn">
                   <a href=" https://seaho5599.github.io/stxconst/" target="_blank">work</a>
                   <a href="https://github.com/seaho5599/stxconst" target="_blank">github</a>
-
                   <a href="https://seaho5599.github.io/page-stx/" target="_blank">vue.js work</a>
                   <a href="https://github.com/seaho5599/vuestx" target="_blank">vue.js github</a>
-
                   <a href="http://www.stxconst.co.kr/" target="_blank">origin</a>
                 </div>
-              </li>
-            </ul>
-
+              </div>
+              <div class="protfoio-clone p-vue">
+                <div class="sw-txt">
+                  <h5>MiniMemo(Vue.js)</h5>
+                  <a href="#" target="_blank">
+                    <img src="images/400x500.png" alt="https://seaho5599.github.io/hanaph/">
+                  </a>
+                  <p>프로젝트 설명</p>
+                </div>
+                <div class="sw-btn">
+                  <a href="깃허브 Vue.js page주소" target="_blank">vue.js work</a>
+                  <a href="깃허브 Vue.js 주소" target="_blank">vue.js github</a>
+                  <a href="Figma 링크 주소" target="_blank">Figma</a>
+                </div>
+              </div>
+              <div class="protfoio-clone p-vue">
+                <div class="sw-txt">
+                  <h5>TodoApp (Vue.js/RESTFull(jsonServer))</h5>
+                  <a href="#" target="_blank">
+                    <img src="images/400x500.png" alt="https://seaho5599.github.io/hanaph/">
+                  </a>
+                  <p>프로젝트 설명</p>
+                </div>
+                <div class="sw-btn">
+                  <a href="깃허브 Vue.js page주소" target="_blank">vue.js work</a>
+                  <a href="깃허브 Vue.js 주소" target="_blank">vue.js github</a>
+                  <a href="Figma 링크 주소" target="_blank">Figma</a>
+                </div>
+              </div>
+              <div class="protfoio-clone p-vue">
+                <div class="sw-txt">
+                  <h5>TodoApp (Vue.js/php/MySQL)</h5>
+                  <a href="#" target="_blank">
+                    <img src="images/400x500.png" alt="https://seaho5599.github.io/hanaph/">
+                  </a>
+                  <p>프로젝트 설명</p>
+                </div>
+                <div class="sw-btn">
+                  <a href="깃허브 Vue.js page주소" target="_blank">vue.js work</a>
+                  <a href="깃허브 Vue.js 주소" target="_blank">vue.js github</a>
+                  <a href="Figma 링크 주소" target="_blank">Figma</a>
+                </div>
+              </div>
+              <div class="protfoio-clone p-vue">
+                <div class="sw-txt">
+                  <h5>지브리스튜디오 API (Vue.js)</h5>
+                  <a href="#" target="_blank">
+                    <img src="images/400x500.png" alt="https://seaho5599.github.io/hanaph/">
+                  </a>
+                  <p>프로젝트 설명</p>
+                </div>
+                <div class="sw-btn">
+                  <a href="깃허브 Vue.js page주소" target="_blank">vue.js work</a>
+                  <a href="깃허브 Vue.js 주소" target="_blank">vue.js github</a>
+                  <a href="Figma 링크 주소" target="_blank">Figma</a>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="portfolio-wrap">
-          <h3>Vue.js Coding</h3>
-
-          <div class="portfolio-cate">
-            <h4>Study Vue.js</h4>
-            <ul class="portfolio-list">
-              <li>
+          <!-- <div class="swiper-container sw-personal">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <h5>하나제약주식회사(PC/Mobile)</h5>
+                <div class="sw-txt">
+                  <a href="https://seaho5599.github.io/hanaph/" target="_blank">
+                    <img src="images/하나제약주식.png" alt="https://seaho5599.github.io/hanaph/">
+                  </a>
+                </div>
+                <div class="sw-btn">
+                  <a href="https://seaho5599.github.io/hanaph/" target="_blank">work</a>
+                  <a href="https://github.com/seaho5599/hanaph" target="_blank">github</a>
+                  <a href="http://www.hanaph.co.kr/index.do" target="_blank">origin</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <h5>정육각(PC/Mobile)</h5>
+                <div class="sw-txt">
+                  <a href="https://seaho5599.github.io/jeongyookgak/" target="_blank">
+                    <img src="images/정육각.png" alt="https://www.jeongyookgak.com/index">
+                  </a>
+                </div>
+                <div class="sw-btn">
+                  <a href="https://seaho5599.github.io/jeongyookgak/" target="_blank">work</a>
+                  <a href="https://github.com/seaho5599/jeongyookgak" target="_blank">github</a>
+                  <a href="https://www.jeongyookgak.com/index" target="_blank">origin</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <h5>도미노피자(PC/Mobile)</h5>
+                <div class="sw-txt">
+                  <a href="https://seaho5599.github.io/dominos/" target="_blank">
+                    <img src="images/도미노피자.png" alt="https://web.dominos.co.kr/main">
+                  </a>
+                </div>
+                <div class="sw-btn">
+                  <a href="https://seaho5599.github.io/dominos/" target="_blank">work</a>
+                  <a href="https://github.com/seaho5599/dominos" target="_blank">github</a>
+                  <a href="https://web.dominos.co.kr/main" target="_blank">origin</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <h5>오설록(PC/Mobile)</h5>
+                <div class="sw-txt">
+                  <a href="https://seaho5599.github.io/osulloc/" target="_blank">
+                    <img src="images/오설록.png" alt="https://www.osulloc.com/kr/ko">
+                  </a>
+                </div>
+                <div class="sw-btn">
+                  <a href="https://seaho5599.github.io/osulloc/" target="_blank">work</a>
+                  <a href="https://github.com/seaho5599/osulloc" target="_blank">github</a>
+                  <a href="https://www.osulloc.com/kr/ko" target="_blank">origin</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-container sw-study">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <h5>K-Water(PC/Mobile)</h5>
+                <div class="sw-txt">
+                  <a href="https://seaho5599.github.io/K-water/" target="_blank">
+                    <img src="images/k-water.png" alt="https://www.kwater.or.kr/main.do?s_mid=1">
+                  </a>
+                </div>
+                <div class="sw-btn">
+                  <a href="https://seaho5599.github.io/K-water/" target="_blank">work</a>
+                  <a href="https://github.com/seaho5599/K-water" target="_blank">github</a>
+                  <a href="https://www.kwater.or.kr/main.do?s_mid=1" target="_blank">origin</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <h5>거제청년이룸(PC/Mobile/Vue.js)</h5>
+                <div class="sw-txt">
+                  <a href="https://seaho5599.github.io/page-geoje/" target="_blank">
+                    <img src="images/거제청년이룸.png" alt="https://geojeyouth.com/web/">
+                  </a>
+                </div>
+                <div class="sw-btn">
+                  <a href="https://seaho5599.github.io/geojeyouth/" target="_blank">work</a>
+                  <a href="https://github.com/seaho5599/geojeyouth" target="_blank">github</a>
+                  <a href="https://seaho5599.github.io/page-geoje/" target="_blank">vue.js work</a>
+                  <a href="https://github.com/seaho5599/vue-geoje" target="_blank">vue.js github</a>
+                  <a href="https://geojeyouth.com/web/" target="_blank">origin</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <h5>노엘로힐스(PC/Mobile/Vue.js)</h5>
+                <div class="sw-txt">
+                  <a href="https://seaho5599.github.io/page-noelo/" target="_blank">
+                    <img src="images/노엘로힐스.png" alt="사이트명">
+                  </a>
+                </div>
+                <div class="sw-btn">
+                  <a href="https://seaho5599.github.io/noelohills/" target="_blank">work</a>
+                  <a href="https://github.com/seaho5599/noelohills" target="_blank">github</a>
+                  <a href="https://seaho5599.github.io/page-noelo/" target="_blank">vue.js work</a>
+                  <a href="https://github.com/seaho5599/gitnoelo" target="_blank">vue.js github</a>
+                  <a href="https://www.noelohills.com/" target="_blank">origin</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <h5>마시그래이(PC/Mobile/Vue.js)</h5>
+                <div class="sw-txt">
+                  <a href=" https://seaho5599.github.io/page-mashi/" target="_blank">
+                    <img src="images/마시그래이.png" alt="https://www.masigray.com:5021/main/main.asp">
+                  </a>
+                </div>
+                <div class="sw-btn">
+                  <a href="https://seaho5599.github.io/masigray/" target="_blank">work</a>
+                  <a href="https://github.com/seaho5599/masigray" target="_blank">github</a>
+                  <a href=" https://seaho5599.github.io/page-mashi/" target="_blank">vue.js work</a>
+                  <a href="https://github.com/seaho5599/vuemasi" target="_blank">vue.js github</a>
+                  <a href="https://www.masigray.com:5021/main/main.asp" target="_blank">origin</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <h5>STX건설(PC/Vue.js)</h5>
+                <div class="sw-txt">
+                  <a href="https://seaho5599.github.io/page-stx/" target="_blank">
+                    <img src="images/stx.png" alt="http://www.stxconst.co.kr/">
+                  </a>
+                </div>
+                <div class="sw-btn">
+                  <a href=" https://seaho5599.github.io/stxconst/" target="_blank">work</a>
+                  <a href="https://github.com/seaho5599/stxconst" target="_blank">github</a>
+                  <a href="https://seaho5599.github.io/page-stx/" target="_blank">vue.js work</a>
+                  <a href="https://github.com/seaho5599/vuestx" target="_blank">vue.js github</a>
+                  <a href="http://www.stxconst.co.kr/" target="_blank">origin</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-container sw-vue">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
                 <h5>MiniMemo(Vue.js)</h5>
-                <p>프로젝트 설명</p>
-                <img src="images/400x500.png" alt="">
-                <a href="깃허브 Vue.js page주소" target="_blank">vue.js work</a>
-                <a href="깃허브 Vue.js 주소" target="_blank">vue.js github</a>
-                <a href="Figma 링크 주소" target="_blank">Figma</a>
-              </li>
-              <li>
-                <img src="images/400x500.png" alt="">
-                <h5>지브리스튜디오 API (Vue.js)</h5>
-                <p>프로젝트 설명</p>
-                <a href="깃허브 Vue.js page주소" target="_blank">vue.js work</a>
-                <a href="깃허브 Vue.js 주소" target="_blank">vue.js github</a>
-              </li>
-              <li>
-                <img src="images/400x500.png" alt="">
-                <h5>TodoApp (Vue.js/php/MySQL)</h5>
-                <p>프로젝트 설명</p>
-                <a href="dothome 계정주소 http://seaho5599.dothome.co.kr" target="_blank">vue.js work</a>
-                <a href="깃허브 Vue.js 주소" target="_blank">vue.js github</a>
-              </li>
-              <li>
-                <img src="images/400x500.png" alt="">
+                <div class="sw-txt">
+                  <a href="#" target="_blank">
+                    <img src="images/400x500.png" alt="https://seaho5599.github.io/hanaph/">
+                  </a>
+                  <p>프로젝트 설명</p>
+                </div>
+                <div class="sw-btn">
+                  <a href="깃허브 Vue.js page주소" target="_blank">vue.js work</a>
+                  <a href="깃허브 Vue.js 주소" target="_blank">vue.js github</a>
+                  <a href="Figma 링크 주소" target="_blank">Figma</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
                 <h5>TodoApp (Vue.js/RESTFull(jsonServer))</h5>
-                <p>프로젝트 설명</p>
-                <a href="dothome 계정주소 http://seaho5599.dothome.co.kr" target="_blank">vue.js work</a>
-                <a href="깃허브 Vue.js 주소" target="_blank">vue.js github</a>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-        <div class="portfolio-wrap">
-          <h3>Etc Coding</h3>
-        </div>
-      </div>
+                <div class="sw-txt">
+                  <a href="#" target="_blank">
+                    <img src="images/400x500.png" alt="https://seaho5599.github.io/hanaph/">
+                  </a>
+                  <p>프로젝트 설명</p>
+                </div>
+                <div class="sw-btn">
+                  <a href="깃허브 Vue.js page주소" target="_blank">vue.js work</a>
+                  <a href="깃허브 Vue.js 주소" target="_blank">vue.js github</a>
+                  <a href="Figma 링크 주소" target="_blank">Figma</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <h5>TodoApp (Vue.js/php/MySQL)</h5>
+                <div class="sw-txt">
+                  <a href="#" target="_blank">
+                    <img src="images/400x500.png" alt="https://seaho5599.github.io/hanaph/">
+                  </a>
+                  <p>프로젝트 설명</p>
+                </div>
+                <div class="sw-btn">
+                  <a href="깃허브 Vue.js page주소" target="_blank">vue.js work</a>
+                  <a href="깃허브 Vue.js 주소" target="_blank">vue.js github</a>
+                  <a href="Figma 링크 주소" target="_blank">Figma</a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <h5>지브리스튜디오 API (Vue.js)</h5>
+                <div class="sw-txt">
+                  <a href="#" target="_blank">
+                    <img src="images/400x500.png" alt="https://seaho5599.github.io/hanaph/">
+                  </a>
+                  <p>프로젝트 설명</p>
+                </div>
+                <div class="sw-btn">
+                  <a href="깃허브 Vue.js page주소" target="_blank">vue.js work</a>
+                  <a href="깃허브 Vue.js 주소" target="_blank">vue.js github</a>
+                  <a href="Figma 링크 주소" target="_blank">Figma</a>
+                </div>
+              </div>
+            </div>
+          </div> -->
     </section>
     <section class="life" id="life">
       <div class="inner">
