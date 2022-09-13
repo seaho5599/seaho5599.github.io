@@ -6,7 +6,6 @@ $(document).ready(function (){
   let goTop = $('.gotop')
   $(window).scroll(function(){
     let temp = $(window).scrollTop();
-    console.log(temp)
     if(temp < 400){
       goTop.stop().fadeOut(200)
     }else{

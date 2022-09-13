@@ -89,10 +89,20 @@ body {
   z-index: 9999;
 }
 
-.header h1 {
-  padding-top: 50px;
-  text-align: center;
-  font-size: 48px;
+.logo {
+  position: relative;
+  display: block;
+  margin-top: 60px;
+}
+.logo h1{
+  position: relative;
+  display: block;
+  font-size: 0;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  background: url('../images/logo.png') no-repeat center;
+  background-size: cover;
 }
 
 .gnb {
@@ -102,7 +112,6 @@ body {
   justify-content: flex-end;
   align-items: center;
   padding: 100px 0;
-  margin-top: 50px;
 }
 
 .gnb>li {
@@ -120,7 +129,7 @@ body {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 500;
-  transition: opacity 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .gnb>li>a::before {
@@ -375,29 +384,46 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: calc(100% / 4);
+  width: calc(100% / 3);
   padding: 50px 0;
 }
 
 .sw-txt {}
 .sw-txt h5{
+  position: relative;
   text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  transition: all 0.5s ease-in-out;
+  /* z-index: 99; */
 }
 
 .sw-txt a {}
 
 .sw-txt a img {
-  width: 200px;
-  height: 200px;
+  width: 350px;
+  height: 313px;
+  border: 5px solid #eee;
+  border-radius: 15px;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+      0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+  transition: all 0.3s ease-in;
+}
+.protfoio-clone:hover .sw-txt a img{
+  box-shadow: 12px 22px 32px 6px rgba(77, 77, 235, 0.25),
+      0 8px 16px -8px rgba(77, 77, 235, 0.3), 0 -6px 16px -6px rgba(77, 77, 235, 0.025);
 }
 .sw-btn {
-  
+  position: relative;
+  display: block;
+  margin-top: 15px;
 }
 
 .sw-btn a {
   display: inline-block;
-  width: auto;
   text-transform: uppercase;
+  padding: 0px 10px;  
 }
 
 .life {
