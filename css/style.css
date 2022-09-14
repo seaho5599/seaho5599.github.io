@@ -377,7 +377,8 @@ body {
 .portfolio-wrapper{
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  
+  align-items: flex-start
 }
 .protfoio-clone{
   display: flex;
@@ -411,8 +412,8 @@ body {
   transition: all 0.3s ease-in;
 }
 .protfoio-clone:hover .sw-txt a img{
-  box-shadow: 12px 22px 32px 6px rgba(77, 77, 235, 0.25),
-      0 8px 16px -8px rgba(77, 77, 235, 0.3), 0 -6px 16px -6px rgba(77, 77, 235, 0.025);
+  box-shadow: 12px 22px 32px 6px rgba(94, 94, 105, 0.25),
+      0 8px 16px -8px rgba(94, 94, 105, 0.3), 0 -6px 16px -6px rgba(94, 94, 105, 0.025);
 }
 .sw-btn {
   position: relative;
@@ -423,7 +424,11 @@ body {
 .sw-btn a {
   display: inline-block;
   text-transform: uppercase;
-  padding: 0px 10px;  
+  padding: 5px 10px; 
+  background: #d1d5d8;
+  color: #8a8c93;
+  border-radius: 10px;
+  margin: 5px;
 }
 
 .life {
@@ -434,6 +439,12 @@ body {
 .life .inner {
   position: relative;
   display: block;
+}
+.life .inner h2{
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .about {}
@@ -458,7 +469,15 @@ body {
 .about-right {
   margin-top: 100px;
 }
+.about-txt{
+  position: relative;
+  display: block;
+  width: 400px;
+  height: 400px;
+  background: #fff;
+  border: 2px solid #999;
 
+}
 .contact {
   position: relative;
   display: block;
