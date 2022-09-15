@@ -6,6 +6,7 @@ $(document).ready(function (){
   let goTop = $('.gotop')
   $(window).scroll(function(){
     let temp = $(window).scrollTop();
+    // console.log(temp)
     if(temp < 400){
       goTop.stop().fadeOut(200)
     }else{
@@ -17,6 +18,31 @@ $(document).ready(function (){
       }, 1000);
     })
   })
+  // 버튼 이동
+  $('.gnb > li > a').click(function(e){
+    e.preventDefault()
+  })
+  $('.go-home').click(function(){
+    let offset = $('#home').offset();
+    $("html, body").animate({scrollTop: offset.top},800);
+  })
+  $('.go-profile').click(function(){
+    let offset = $('#profile').offset();
+    $("html, body").animate({scrollTop: offset.top},800);
+  })
+  $('.go-protfolio').click(function(){
+    let offset = $('#portfolio').offset();
+    $("html, body").animate({scrollTop: offset.top},800);
+  })
+  $('.go-life').click(function(){
+    let offset = $('#life').offset();
+    $("html, body").animate({scrollTop: offset.top},800);
+  })
+  $('.go-contact').click(function(){
+    let offset = $('#contact').offset();
+    $("html, body").animate({scrollTop: offset.top},800);
+  })
+  
 
   // 스크롤 적용
   setTimeout(function () {
@@ -42,21 +68,21 @@ $(document).ready(function (){
   let vue = $('.vue')
 
   all.click(function(){
-    $('.protfoio-clone').stop().fadeIn(400);
+    $('.protfoio-clone').stop().animate({opacity:"1"},600).show(700);
   })
   personal.click(function(){
-    $('.p-personal').stop().fadeIn(400);
-    $('.p-study').stop().fadeOut(400);
-    $('.p-vue').stop().fadeOut(400);
+    $('.p-personal').stop().animate({opacity:"1"},600).show(700);
+    $('.p-study').stop().animate({opacity:"0"},600).hide(700);
+    $('.p-vue').stop().animate({opacity:"0"},600).hide(700);
   })
   study.click(function(){
-    $('.p-study').stop().fadeIn(400);
-    $('.p-personal').stop().fadeOut(400);
-    $('.p-vue').stop().fadeOut(400);
+    $('.p-study').stop().animate({opacity:"1"},600).show(700);
+    $('.p-personal').stop().animate({opacity:"0"},600).hide(700);
+    $('.p-vue').stop().animate({opacity:"0"},600).hide(700);
   })
   vue.click(function(){
-    $('.p-vue').stop().fadeIn(400);
-    $('.p-study').stop().fadeOut(400);
-    $('.p-personal').stop().fadeOut(400);
+    $('.p-vue').stop().animate({opacity:"1"},600).show(700);
+    $('.p-study').stop().animate({opacity:"0"},600).hide(700);
+    $('.p-personal').stop().animate({opacity:"0"},600).hide(700);
   })
 })
