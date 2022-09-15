@@ -2,47 +2,58 @@ window.onload = function () {
   AOS.init();
 
 }
-$(document).ready(function (){
+$(document).ready(function () {
   let goTop = $('.gotop')
-  $(window).scroll(function(){
+  $(window).scroll(function () {
     let temp = $(window).scrollTop();
     // console.log(temp)
-    if(temp < 400){
+    if (temp < 400) {
       goTop.stop().fadeOut(200)
-    }else{
+    } else {
       goTop.stop().fadeIn(200)
     }
-    goTop.click(function(){
+    goTop.click(function () {
       $('html').stop().animate({
         scrollTop: 0
       }, 1000);
     })
   })
   // 버튼 이동
-  $('.gnb > li > a').click(function(e){
+  let gnbLiA = $('.gnb > li > a')
+  gnbLiA.click(function (e) {
     e.preventDefault()
   })
-  $('.go-home').click(function(){
+  $('.go-home').click(function () {
     let offset = $('#home').offset();
-    $("html, body").animate({scrollTop: offset.top},800);
+    $("html, body").animate({
+      scrollTop: offset.top
+    }, 800);
   })
-  $('.go-profile').click(function(){
+  $('.go-profile').click(function () {
     let offset = $('#profile').offset();
-    $("html, body").animate({scrollTop: offset.top},800);
+    $("html, body").animate({
+      scrollTop: offset.top
+    }, 800);
   })
-  $('.go-protfolio').click(function(){
+  $('.go-protfolio').click(function () {
     let offset = $('#portfolio').offset();
-    $("html, body").animate({scrollTop: offset.top},800);
+    $("html, body").animate({
+      scrollTop: offset.top
+    }, 800);
   })
-  $('.go-life').click(function(){
+  $('.go-life').click(function () {
     let offset = $('#life').offset();
-    $("html, body").animate({scrollTop: offset.top},800);
+    $("html, body").animate({
+      scrollTop: offset.top
+    }, 800);
   })
-  $('.go-contact').click(function(){
+  $('.go-contact').click(function () {
     let offset = $('#contact').offset();
-    $("html, body").animate({scrollTop: offset.top},800);
+    $("html, body").animate({
+      scrollTop: offset.top
+    }, 800);
   })
-  
+
 
   // 스크롤 적용
   setTimeout(function () {
@@ -61,28 +72,48 @@ $(document).ready(function (){
   $('.counter').counterUp({
     delay: 10,
     time: 2000
-});
+  });
   let all = $('.all')
   let personal = $('.personal')
   let study = $('.study')
   let vue = $('.vue')
 
-  all.click(function(){
-    $('.protfoio-clone').stop().animate({opacity:"1"},600).show(700);
+  all.click(function () {
+    $('.protfoio-clone').stop().animate({
+      opacity: "1"
+    }, 600).show(700);
   })
-  personal.click(function(){
-    $('.p-personal').stop().animate({opacity:"1"},600).show(700);
-    $('.p-study').stop().animate({opacity:"0"},600).hide(700);
-    $('.p-vue').stop().animate({opacity:"0"},600).hide(700);
+  personal.click(function () {
+    $('.p-personal').stop().animate({
+      opacity: "1"
+    }, 600).show(700);
+    $('.p-study').stop().animate({
+      opacity: "0"
+    }, 600).hide(700);
+    $('.p-vue').stop().animate({
+      opacity: "0"
+    }, 600).hide(700);
   })
-  study.click(function(){
-    $('.p-study').stop().animate({opacity:"1"},600).show(700);
-    $('.p-personal').stop().animate({opacity:"0"},600).hide(700);
-    $('.p-vue').stop().animate({opacity:"0"},600).hide(700);
+  study.click(function () {
+    $('.p-study').stop().animate({
+      opacity: "1"
+    }, 600).show(700);
+    $('.p-personal').stop().animate({
+      opacity: "0"
+    }, 600).hide(700);
+    $('.p-vue').stop().animate({
+      opacity: "0"
+    }, 600).hide(700);
   })
-  vue.click(function(){
-    $('.p-vue').stop().animate({opacity:"1"},600).show(700);
-    $('.p-study').stop().animate({opacity:"0"},600).hide(700);
-    $('.p-personal').stop().animate({opacity:"0"},600).hide(700);
+  vue.click(function () {
+    $('.p-vue').stop().animate({
+      opacity: "1"
+    }, 600).show(700);
+    $('.p-study').stop().animate({
+      opacity: "0"
+    }, 600).hide(700);
+    $('.p-personal').stop().animate({
+      opacity: "0"
+    }, 600).hide(700);
   })
 })
