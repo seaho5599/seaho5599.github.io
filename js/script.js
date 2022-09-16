@@ -1,5 +1,49 @@
 window.onload = function () {
   AOS.init();
+  let dataset = {
+    label: "육류 판매량",
+    backgroundColor: ['#ffd950', '#02bc77', '#28c3d7', '#FF6384'], //라벨별 컬러설정
+    borderColor: '#22252B',
+    data: [50, 45, 75, 40]
+  }
+
+  let labels = ['책임감', '호기심', '도전정신', '성실함'];
+
+  let datasets = {
+    datasets: [dataset],
+    labels: labels
+  }
+  let config = {
+    type: 'pie',
+    data: datasets, //데이터 셋 
+    options: {
+        responsive: true,
+        maintainAspectRatio: false, //true 하게 되면 캔버스 width,height에 따라 리사이징된다.
+        legend: {
+            position: 'top',
+            fontColor: 'black',
+            align: 'center',
+            display: true,
+            fullWidth: true,
+            labels: {
+                fontColor: 'rgb(0, 0, 0)'
+            }
+        },
+        plugins: {
+            labels: {//두번째 script태그를 설정하면 각 항목에다가 원하는 데이터 라벨링을 할 수 있다.
+                render: 'value',
+                fontColor: 'black',
+                fontSize: 15,
+                precision: 2
+            }
+
+        }
+    }
+}
+let canvas=document.getElementById('pieChart');
+let pieChart = new Chart(canvas,config);
+
+
 
 }
 $(document).ready(function () {
@@ -62,13 +106,13 @@ $(document).ready(function () {
     }, 800);
   })
   let mbMenu = $('.mb-menu')
-  mbMenu.click(function(){
+  mbMenu.click(function () {
     mbMenu.toggleClass('mb-menu-click')
     $('.mb-menu-list').toggleClass('mb-menu-list-click')
   })
-  $(window).resize(function(){
+  $(window).resize(function () {
     let wW = $(window).width()
-    if(wW < 600){
+    if (wW < 600) {
       mbMenu.removeClass('mb-menu-click')
       $('.mb-menu-list').removeClass('mb-menu-list-click')
     }

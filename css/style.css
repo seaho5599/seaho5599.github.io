@@ -355,6 +355,11 @@ body {
   font-weight: 600;
   white-space: nowrap;
 }
+.profile-box h3 strong{
+  font-weight: 700;
+  font-size: 27px;
+  color: #5fa4e8;
+}
 
 .profile-box .profile-title {
   font-size: 22px;
@@ -369,8 +374,31 @@ body {
   /* word-break: keep-all; */
 
 }
-
-
+.profile-box .profile-txt strong{
+  font-size: 16px;
+  font-weight: 600;
+  color: #1c3154;
+}
+.mbti{
+  position: relative;
+  display: flex;
+  /* width: 100%;
+  height: 100%; */
+  
+}
+.mbti-box{}
+.mbti-box-list{}
+.mbti-box-list li{}
+.mbti-box-list li .mbti-box-title{}
+.mbti-box-list li .mbti-box-txt{}
+.canvas-box{
+  position: relative;
+  display: block;
+}
+.canvas{
+  width: 100%;
+  height: 60%;
+}
 .skill {
   position: relative;
   display: block;
@@ -381,7 +409,7 @@ body {
   font-size: 32px;
   text-transform: uppercase;
   font-weight: 600;
-  margin-bottom: 150px;
+  margin-bottom: 80px;
 }
 
 .skill-list {
@@ -394,7 +422,7 @@ body {
 .skill-list li {
   position: relative;
   text-align: center;
-  width: calc(100% / 4);
+  width: calc(100% / 6);
   padding: 10px 0;
   /* height: 100px; */
 }
