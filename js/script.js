@@ -8,9 +8,10 @@ $(document).ready(function () {
     let temp = $(window).scrollTop();
     // console.log(temp)
     if (temp < 400) {
-      goTop.stop().fadeOut(200)
+      goTop.stop().hide(200)
+      goTop.removeAttr('style')
     } else {
-      goTop.stop().fadeIn(200)
+      goTop.stop().show(200)
     }
     goTop.click(function () {
       $('html').stop().animate({
@@ -18,6 +19,13 @@ $(document).ready(function () {
       }, 1000);
     })
   })
+  // $(window).resize(function(){
+  //   let wW = $(window).width()
+  //   if(wW < 950){
+  //     goTop.removeAttr('style')
+  //   }
+  // })
+
   // 버튼 이동
   let gnbLiA = $('.gnb > li > a')
   gnbLiA.click(function (e) {
@@ -79,7 +87,7 @@ $(document).ready(function () {
   let vue = $('.vue')
 
   all.click(function () {
-    $('.protfoio-clone').stop().animate({
+    $('.protfolio-clone').stop().animate({
       opacity: "1"
     }, 600).show(700);
   })

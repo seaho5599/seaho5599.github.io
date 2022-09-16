@@ -74,6 +74,12 @@ body {
   color: #e5e5e5;
 }
 
+@media screen and (max-width:950px) {
+  .gotop {
+    display: none;
+  }
+}
+
 .wrap {
   position: relative;
   display: block;
@@ -138,24 +144,8 @@ body {
   color: #888;
 }
 
-/* .gnb>li>a::before {
-  content: '[';
-  position: relative;
-  left: 0;
-  opacity: 0;
-  transition: opacity ease-in-out 0.3s;
-}
-
-.gnb>li>a::after {
-  content: '}';
-  position: relative;
-  right: 0;
-  opacity: 0;
-  transition: opacity ease-in-out 0.3s;
-} */
-
 .gnb>li>a:hover {
-  color:#424242;
+  color: #424242;
 
 }
 
@@ -171,6 +161,31 @@ body {
   transform: scale(0.8);
 }
 
+@media screen and (max-width: 900px) {
+  .header {
+    width: 28.89vw;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .wrap {
+    margin-left: 31.33vw;
+    transition: all 0.2s;
+  }
+
+  .logo h1 {
+    width: 19.23vw;
+    height: 19.23vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .wrap {
+    margin-left: 0;
+  }
+  .header{
+    display: none;
+  }
+}
 .visual {
   position: relative;
   display: block;
@@ -224,21 +239,25 @@ body {
   background: url('../images/curriculum.png') no-repeat center;
   background-size: cover;
 }
+
 @media screen and (max-width:1090px) {
   .visual {
     position: relative;
     display: block;
     height: 91.74vw;
   }
+
   .visual h2 {
     height: 73.39vw;
   }
 }
+
 @media screen and (max-width:880px) {
   .visual-icon li {
     padding: 0 5.68vw;
+  }
 }
-}
+
 /* profile */
 .profile {
   position: relative;
@@ -266,21 +285,33 @@ body {
 }
 
 .profile-header img {
+  width: 100%;
+  height: 100%;
   margin-right: 100px;
 }
 
-.profile-title {}
+.profile-box {}
 
-.profile-title h3 {
-  font-size: 24px;
+.profile-box h3 {
+  font-size: 28px;
   margin-bottom: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.profile-box .profile-title {
+  font-size: 22px;
   font-weight: 500;
+  margin: 15px 0;
 }
 
-.profile-title p {
-  font-size: 18px;
-
+.profile-box .profile-txt {
+  font-size: 15px;
+  line-height: 1.8;
+  /* word-break: keep-all; */
+  
 }
+
 
 .skill {
   position: relative;
@@ -313,46 +344,135 @@ body {
 .skill-list li i {
   font-size: 50px;
 }
-.html5{
+
+.html5 {
   color: #f56141;
 }
-.css{
+
+.css {
   color: #5fa4e8;
 }
-.js{
+
+.js {
   color: #f0ba43;
 }
-.jq{
+
+.jq {
   color: #e98e35;
 }
-.s-vue{
+
+.s-vue {
   color: #59f1c5;
 }
-.es{
+
+.es {
   color: #ebd047;
 }
-.scss{
+
+.scss {
   color: #fac0cb;
 }
-.flex{
+
+.flex {
   color: #38a3eb;
 }
-.grid{
+
+.grid {
   color: #9ecd1c;
 }
-.figma{
+
+.figma {
   color: #1c3154;
 }
-.bootstrap{
+
+.bootstrap {
   color: #881aff;
 }
-.github{
+
+.github {
   color: #b1acac;
 }
 
 .skill-list li span {
   text-transform: uppercase;
   font-weight: 500;
+}
+@media screen and (max-width:1465px) {
+  .profile-box .profile-txt {
+    font-size: 1.09vw;
+
+  }
+}
+
+@media screen and (max-width:1325px) {
+  .profile-header img {
+    margin-right: 5.55vw;
+    transition: all 0.3s ease;
+    /* width: 30.19vw; */
+    height: 37.74vw;
+  }
+
+  .profile-box h3 {
+    font-size: 2.11vw;
+  }
+
+  .profile-box .profile-txt {
+    line-height: 1.3;
+
+  }
+
+}
+
+@media screen and (max-width:1000px) {
+  .profile-header {
+    flex-direction: column;
+
+  }
+
+  .profile-header img {
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .profile-box {
+    display: block;
+    padding-top: 20px;
+    margin: 0 auto;
+  }
+
+  .profile-box h3 {
+    font-size: 3vw;
+    text-align: center;
+  }
+
+  .profile-box .profile-title {
+    text-align: center;
+  }
+
+  .profile-box .profile-txt {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1.8vw;
+
+  }
+}
+@media screen and (max-width:620px) {
+  .profile-box h3 {
+    font-size: 4.5vw;
+    
+  }
+  .profile-box .profile-title {
+    font-size: 3.5vw;
+  }
+  .profile-box .profile-txt {
+    font-size: 2.6vw;
+  }
+}
+@media screen and (max-width:550px) {
+  .skill-list li i {
+    font-size: 9.09vw;
+}
 }
 
 .portfolio {
@@ -397,10 +517,12 @@ body {
   border-radius: 15px 15px 0 15px;
   color: #424242;
 }
-.portfolio-btn button:hover{
+
+.portfolio-btn button:hover {
   background: #e6b10a;
   color: #ddd;
 }
+
 .portfolio-btn button:active {
   transform: scale(0.9);
 }
@@ -410,7 +532,7 @@ body {
 .all:focus {
   background: #e6b10a;
   color: #fff;
-  border: 2px solid #d1d5d8 ;
+  border: 2px solid #d1d5d8;
 }
 
 .personal {}
@@ -418,7 +540,7 @@ body {
 .personal:focus {
   background: #e6b10a;
   color: #fff;
-  border: 2px solid #d1d5d8 ;
+  border: 2px solid #d1d5d8;
 }
 
 .study {}
@@ -426,7 +548,7 @@ body {
 .study:focus {
   background: #e6b10a;
   color: #fff;
-  border: 2px solid #d1d5d8 ;
+  border: 2px solid #d1d5d8;
 }
 
 .vue {}
@@ -434,7 +556,7 @@ body {
 .vue:focus {
   background: #e6b10a;
   color: #fff;
-  border: 2px solid #d1d5d8 ;
+  border: 2px solid #d1d5d8;
 }
 
 .portfolio-all {
@@ -450,7 +572,7 @@ body {
   align-items: flex-start
 }
 
-.protfoio-clone {
+.protfolio-clone {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -459,9 +581,13 @@ body {
   width: calc(100% / 3);
   height: 100%;
   margin: 50px 0;
+  transition: all 0.3s ease;
 }
 
-.sw-txt {}
+
+.sw-txt {
+  position: relative;
+}
 
 .sw-txt h5 {
   position: relative;
@@ -473,7 +599,12 @@ body {
   /* z-index: 99; */
 }
 
-.sw-txt a {}
+.sw-txt a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
 .sw-txt a img {
   width: 350px;
@@ -482,28 +613,22 @@ body {
   border-radius: 15px;
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
     0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
-  transition: all 0.3s ease-in;
+  transition: all 0.2s ease-in;
 }
 
-.protfoio-clone:hover .sw-txt a img {
-  box-shadow: 12px 22px 32px 6px rgba(94, 94, 105, 0.25),
-    0 8px 16px -8px rgba(94, 94, 105, 0.3), 0 -6px 16px -6px rgba(94, 94, 105, 0.025);
-}
-
-.clone-dim {
+.protfolio-icon {
   position: absolute;
-  left: 25px;
-  top: 39px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: block;
-  width: 350px;
-  height: 313px;
-  background: rgba(3, 3, 3, 0);
-  border-radius: 10px;
-  transition: 0.5s ease-in-out;
+  width: 270px;
+  height: 130px;
   opacity: 0;
+  transition: opacity 0.3s ease-in;
 }
 
-.clone-dim-box {
+.protfolio-icon-box {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -511,40 +636,47 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
-  height: 130px;
-  background-image: linear-gradient(to right, rgba(250,249,248,1), rgba(228,228,227,1));
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(250, 249, 248, 1), rgba(228, 228, 227, 1));
   box-shadow: 0px 0px 10px 0px #ebebeb;
   border-radius: 15px;
   z-index: 9;
   border: 3px solid #888;
 }
 
-.clone-dim-box a {
+.protfolio-icon-box>a {
   padding: 10px 17px;
+  width: auto;
+  height: auto;
 }
 
-.clone-dim-box a i {
+.protfolio-icon-box>a i {
   color: #566;
   font-size: 35px;
-
 }
 
-.protfoio-clone:hover .clone-dim {
-  background: rgba(3, 3, 3, 0.3);
+.protfolio-clone:hover .sw-txt a img {
+  box-shadow: 12px 22px 32px 6px rgba(94, 94, 105, 0.25),
+    0 8px 16px -8px rgba(94, 94, 105, 0.3), 0 -6px 16px -6px rgba(94, 94, 105, 0.025);
+  filter: brightness(0.8);
+}
+
+.protfolio-clone:hover .protfolio-icon {
   opacity: 1;
 }
 
 
 
+
 .sw-btn {
   position: relative;
-  display: block;
+  display: flex;
   margin-top: 15px;
 }
 
 .sw-btn a {
-  display: inline-block;
+  display: block;
   text-transform: uppercase;
   padding: 5px 10px;
   background: #d1d5d8;
@@ -553,6 +685,46 @@ body {
   margin: 5px;
 }
 
+@media screen and (max-width:1480px) {
+  .protfolio-clone {
+    width: calc(100% / 2);
+  }
+
+  .sw-txt a img {
+    width: 36.89vw;
+    height: 35.33vw;
+  }
+
+}
+
+@media screen and (max-width: 1130px) {
+  .sw-txt a img {
+    width: 34.89vw;
+    height: 33.33vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .protfolio-clone {
+    width: 100%;
+  }
+
+  .sw-txt a img {
+    width: 450px;
+    height: 413px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .sw-txt a img {
+    width: 57.69vw;
+    height: 52.95vw;
+  }
+
+  .sw-btn a {
+    font-size: 2.04vw;
+  }
+}
 .life {
   position: relative;
   display: block;
