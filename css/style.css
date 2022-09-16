@@ -350,6 +350,7 @@ body {
 
 .profile-box h3 {
   font-size: 28px;
+  margin-top: 50px;
   margin-bottom: 20px;
   font-weight: 600;
   white-space: nowrap;
@@ -364,6 +365,7 @@ body {
 .profile-box .profile-txt {
   font-size: 15px;
   line-height: 1.8;
+  white-space: nowrap;
   /* word-break: keep-all; */
 
 }
@@ -732,18 +734,20 @@ body {
 
 .sw-btn {
   position: relative;
-  display: flex;
+  display: block;
   margin-top: 15px;
 }
 
 .sw-btn a {
-  display: block;
+  display: inline-block;
   text-transform: uppercase;
   padding: 5px 10px;
   background: #d1d5d8;
   color: #8a8c93;
   border-radius: 10px;
   margin: 5px;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
 @media screen and (max-width:1480px) {
