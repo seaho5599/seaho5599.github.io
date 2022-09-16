@@ -86,6 +86,59 @@ body {
   margin-left: 260px;
 }
 
+.mb-menu {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  display: block;
+  width: 22px;
+  height: 21px;
+  background: url('../images/MENU.png') no-repeat center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 9999;
+  cursor: pointer;
+}
+.mb-menu-click{
+  background: url('../images/close.png') no-repeat center;
+  background-size: cover;
+  transition: background 0.3s ease-in;
+}
+.mb-menu-list {
+  position: absolute;
+  top: 0;
+  right: -500px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-end;
+  transition: right 0.5s ease;
+}
+.mb-menu-list-click{
+  right: 25px;
+}
+.mb-menu-list li {}
+
+.mb-menu-list li a {
+  /* background: #d1d5d8; */
+  /* color: #8a8c93; */
+  border-radius: 15px;
+  padding: 5px 15px;
+  color: #888;
+  margin: 0 5px;
+
+}
+
+.mb-menu-list li a:hover {
+  color: #424242;
+  transition: all 0.3s ease-in; 
+}
+@media screen and (max-width:600px) {
+  .mb-menu{
+    opacity: 1;
+  }
+}
 .header {
   position: fixed;
   left: 0;
@@ -178,14 +231,17 @@ body {
     height: 19.23vw;
   }
 }
+
 @media screen and (max-width: 600px) {
   .wrap {
     margin-left: 0;
   }
-  .header{
+
+  .header {
     display: none;
   }
 }
+
 .visual {
   position: relative;
   display: block;
@@ -309,7 +365,7 @@ body {
   font-size: 15px;
   line-height: 1.8;
   /* word-break: keep-all; */
-  
+
 }
 
 
@@ -397,6 +453,7 @@ body {
   text-transform: uppercase;
   font-weight: 500;
 }
+
 @media screen and (max-width:1465px) {
   .profile-box .profile-txt {
     font-size: 1.09vw;
@@ -457,22 +514,26 @@ body {
 
   }
 }
+
 @media screen and (max-width:620px) {
   .profile-box h3 {
     font-size: 4.5vw;
-    
+
   }
+
   .profile-box .profile-title {
     font-size: 3.5vw;
   }
+
   .profile-box .profile-txt {
     font-size: 2.6vw;
   }
 }
+
 @media screen and (max-width:550px) {
   .skill-list li i {
     font-size: 9.09vw;
-}
+  }
 }
 
 .portfolio {
@@ -725,6 +786,7 @@ body {
     font-size: 2.04vw;
   }
 }
+
 .life {
   position: relative;
   display: block;

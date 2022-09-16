@@ -61,8 +61,11 @@ $(document).ready(function () {
       scrollTop: offset.top
     }, 800);
   })
-
-
+  let mbMenu = $('.mb-menu')
+  mbMenu.click(function(){
+    mbMenu.toggleClass('mb-menu-click')
+    $('.mb-menu-list').toggleClass('mb-menu-list-click')
+  })
   // 스크롤 적용
   setTimeout(function () {
     $(".header").niceScroll({
