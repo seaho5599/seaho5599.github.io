@@ -66,6 +66,13 @@ $(document).ready(function () {
     mbMenu.toggleClass('mb-menu-click')
     $('.mb-menu-list').toggleClass('mb-menu-list-click')
   })
+  $(window).resize(function(){
+    let wW = $(window).width()
+    if(wW < 600){
+      mbMenu.removeClass('mb-menu-click')
+      $('.mb-menu-list').removeClass('mb-menu-list-click')
+    }
+  })
   // 스크롤 적용
   setTimeout(function () {
     $(".header").niceScroll({
