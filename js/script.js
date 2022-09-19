@@ -1,34 +1,34 @@
 window.onload = function () {
   AOS.init();
 
-  const content = "안녕하세요!! \n 저의 포토폴리오의 오신 걸 \n 환영합니다.";
-  const text = document.querySelector(".visual-title");
-  let i = 0;
+//   const content = "안녕하세요!! \n 저의 포토폴리오의 오신 걸 \n 환영합니다.";
+//   const text = document.querySelector(".visual-title");
+//   let i = 0;
   
-  function typing(){
-      let txt = content[i++];
-      text.innerHTML += txt=== "\n" ? "<br/>": txt;
-      if (i > content.length) {
-          text.textContent = "";
-          i = 0;
-      }
-  }
-  setInterval(typing, 300)
+//   function typing(){
+//       let txt = content[i++];
+//       text.innerHTML += txt=== "\n" ? "<br/>": txt;
+//       if (i > content.length) {
+//           text.textContent = "";
+//           i = 0;
+//       }
+//   }
+//   setInterval(typing, 300)
 
-// 딜레이 기능 ( 마이크로초 )
-function wait(ms) {
-  return new Promise(res => setTimeout(res, ms))
-}
+// // 딜레이 기능 ( 마이크로초 )
+// function wait(ms) {
+//   return new Promise(res => setTimeout(res, ms))
+// }
 
-// 초기 실행
-setTimeout(typing, 2700);
+// // 초기 실행
+// setTimeout(typing, 2700);
 
 
   let dataset = {
-    label: "육류 판매량",
+    label: "가능성그래프",
     backgroundColor: ['#ffd950', '#02bc77', '#28c3d7', '#FF6384'], //라벨별 컬러설정
     borderColor: '#22252B',
-    data: [90, 90, 90, 90]
+    data: [90, 85, 95, 98]
   }
 
   let labels = ['책임감', '소통능력', '도전정신', '성실함'];
@@ -167,39 +167,39 @@ $(document).ready(function () {
   all.click(function () {
     $('.protfolio-clone').stop().animate({
       opacity: "1"
-    }, 600).show(700);
+    }, 0).show(0);
   })
   personal.click(function () {
     $('.p-personal').stop().animate({
       opacity: "1"
-    }, 600).show(700);
+    }, 0).show(0);
     $('.p-study').stop().animate({
       opacity: "0"
-    }, 600).hide(700);
+    }, 0).hide(0);
     $('.p-vue').stop().animate({
       opacity: "0"
-    }, 600).hide(700);
+    }, 0).hide(0);
   })
   study.click(function () {
     $('.p-study').stop().animate({
       opacity: "1"
-    }, 600).show(700);
+    }, 0).show(0);
     $('.p-personal').stop().animate({
       opacity: "0"
-    }, 600).hide(700);
+    }, 0).hide(0);
     $('.p-vue').stop().animate({
       opacity: "0"
-    }, 600).hide(700);
+    }, 0).hide(0);
   })
   vue.click(function () {
     $('.p-vue').stop().animate({
       opacity: "1"
-    }, 600).show(700);
+    }, 0).show(0);
     $('.p-study').stop().animate({
       opacity: "0"
-    }, 600).hide(700);
+    }, 0).hide(0);
     $('.p-personal').stop().animate({
       opacity: "0"
-    }, 600).hide(700);
+    }, 0).hide(0);
   })
 })
