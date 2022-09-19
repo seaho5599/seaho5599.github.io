@@ -1,13 +1,37 @@
 window.onload = function () {
   AOS.init();
+
+  const content = "안녕하세요!! \n 저의 포토폴리오의 오신 걸 \n 환영합니다.";
+  const text = document.querySelector(".visual-title");
+  let i = 0;
+  
+  function typing(){
+      let txt = content[i++];
+      text.innerHTML += txt=== "\n" ? "<br/>": txt;
+      if (i > content.length) {
+          text.textContent = "";
+          i = 0;
+      }
+  }
+  setInterval(typing, 300)
+
+// 딜레이 기능 ( 마이크로초 )
+function wait(ms) {
+  return new Promise(res => setTimeout(res, ms))
+}
+
+// 초기 실행
+setTimeout(typing, 2700);
+
+
   let dataset = {
     label: "육류 판매량",
     backgroundColor: ['#ffd950', '#02bc77', '#28c3d7', '#FF6384'], //라벨별 컬러설정
     borderColor: '#22252B',
-    data: [50, 45, 75, 40]
+    data: [90, 90, 90, 90]
   }
 
-  let labels = ['책임감', '호기심', '도전정신', '성실함'];
+  let labels = ['책임감', '소통능력', '도전정신', '성실함'];
 
   let datasets = {
     datasets: [dataset],

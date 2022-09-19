@@ -85,6 +85,9 @@ body {
   display: block;
   margin-left: 260px;
 }
+h2{
+  text-transform: uppercase;
+}
 
 .mb-menu {
   position: fixed;
@@ -100,11 +103,13 @@ body {
   z-index: 9999;
   cursor: pointer;
 }
-.mb-menu-click{
+
+.mb-menu-click {
   background: url('../images/close.png') no-repeat center;
   background-size: cover;
   transition: background 0.3s ease-in;
 }
+
 .mb-menu-list {
   position: absolute;
   top: 0;
@@ -115,9 +120,11 @@ body {
   justify-content: flex-end;
   transition: right 0.5s ease;
 }
-.mb-menu-list-click{
+
+.mb-menu-list-click {
   right: 25px;
 }
+
 .mb-menu-list li {}
 
 .mb-menu-list li a {
@@ -132,13 +139,15 @@ body {
 
 .mb-menu-list li a:hover {
   color: #424242;
-  transition: all 0.3s ease-in; 
+  transition: all 0.3s ease-in;
 }
+
 @media screen and (max-width:600px) {
-  .mb-menu{
+  .mb-menu {
     opacity: 1;
   }
 }
+
 .header {
   position: fixed;
   left: 0;
@@ -253,13 +262,36 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-.visual h2 {
-  display: block;
-  width: 300px;
+.visual-top{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
   height: 800px;
+
+}
+.text_box{
+  font-size: 2rem;
+  /* text-align: center; */
+}
+.visual-title{
+ 
 }
 
+.blink {
+  animation: blink 0.5s infinite;
+  font-size: 2.5rem;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+.visual-img{
+  display: block;
+  width: 50%;
+}
 .visual-icon {
   display: flex;
   justify-content: center;
@@ -330,11 +362,20 @@ body {
 
 
 .profile h2 {
-  text-align: center;
+
   font-size: 32px;
   font-weight: 700;
 }
-
+.profile .inner h2::after{
+  /* content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100px;
+  height: 5px;
+  background-color: #333;
+  z-index: 99; */
+}
 .profile-header {
   display: flex;
   margin: 100px 0;
@@ -355,7 +396,8 @@ body {
   font-weight: 600;
   white-space: nowrap;
 }
-.profile-box h3 strong{
+
+.profile-box h3 strong {
   font-weight: 700;
   font-size: 27px;
   color: #5fa4e8;
@@ -374,42 +416,98 @@ body {
   /* word-break: keep-all; */
 
 }
-.profile-box .profile-txt strong{
+
+.profile-box .profile-txt strong {
   font-size: 16px;
   font-weight: 600;
   color: #1c3154;
 }
-.mbti{
+
+.mbti {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
+
   /* width: 100%;
   height: 100%; */
-  
+
 }
-.mbti-box{}
-.mbti-box-list{}
-.mbti-box-list li{}
-.mbti-box-list li .mbti-box-title{}
-.mbti-box-list li .mbti-box-txt{}
-.canvas-box{
+
+.mbti h2 {
   position: relative;
   display: block;
+  width: 100%;
+  margin: 80px 0;
 }
-.canvas{
+
+.mbti-box {
+  position: relative;
+  display: block;
+  width: 50%;
+  background: #ddd;
+}
+
+.mbti-box-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  padding: 0 5px;
+}
+
+.mbti-box-list li {}
+.mbti-box-list li img{
+  display: inline-block;
+  width: 40px;
+  
+}
+
+.mbti-box-list li .mbti-box-title {
+  display: inline-block;
+  font-size: 22px;
+}
+.mbti-1{
+  color: #ffd950;
+}
+.mbti-2{
+  color: #02bc77;
+}
+.mbti-3{
+  color: #28c3d7;
+}
+.mbti-4{
+  color: #FF6384;
+}
+
+.mbti-box-list li .mbti-box-txt {
+  display: block;
+  margin-top: 10px;
+}
+
+.canvas-box {
+  position: relative;
+  display: block;
+  height: 500px;
+}
+
+.canvas {
   width: 100%;
   height: 60%;
 }
+
 .skill {
   position: relative;
   display: block;
 }
 
 .skill h3 {
-  text-align: center;
+  
   font-size: 32px;
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 80px;
+  margin: 80px 0;
 }
 
 .skill-list {
@@ -578,7 +676,7 @@ body {
 }
 
 .portfolio h2 {
-  text-align: center;
+
   font-size: 32px;
   font-weight: 700;
 
@@ -830,7 +928,7 @@ body {
 }
 
 .life .inner h2 {
-  text-align: center;
+
   font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
