@@ -23,7 +23,9 @@ window.onload = function () {
 // // 초기 실행
 // setTimeout(typing, 2700);
 
-
+  // const { width, height } = canvas.getBoundingClientRect();
+  // canvas.width = width;
+  // canvas.height = height;
   let dataset = {
     label: "가능성그래프",
     backgroundColor: ['#ffd950', '#02bc77', '#28c3d7', '#FF6384'], //라벨별 컬러설정

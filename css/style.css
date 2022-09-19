@@ -83,6 +83,7 @@ body {
   position: relative;
   display: block;
   margin-left: 260px;
+  overflow-x: hidden;
   
 }
 h2{
@@ -103,6 +104,7 @@ h2::after{
   background-color: #9B8;
   z-index: 99;
 }
+
 
 .mb-menu {
   position: fixed;  
@@ -270,6 +272,7 @@ h2::after{
   position: relative;
   display: block;
   height: 1000px;
+  /* overflow-y: hidden; */
 }
 
 .visual .inner {
@@ -285,10 +288,10 @@ h2::after{
   height: 800px;
 
 }
-.text_box{
+/* .text_box{ */
   /* font-size: 2rem; */
   /* text-align: center; */
-}
+/* } */
 /* .visual-title{
 
 }
@@ -358,6 +361,11 @@ h2::after{
 @media screen and (max-width:880px) {
   .visual-icon li {
     padding: 0 5.68vw;
+  }
+  .visual-top{
+
+    /* height: 90.90vw; */
+  
   }
 }
 
@@ -642,8 +650,6 @@ h2::after{
 @media screen and (max-width:1325px) {
   .profile-header img {
     margin-right: 5.55vw;
-    
-    /* width: 30.19vw; */
     height: 37.74vw;
   }
 
@@ -661,6 +667,20 @@ h2::after{
   .experience p {
     font-size: 1.51px ;
   }
+  .Possibility-inner{
+  flex-direction: column-reverse;
+  }
+  .Possibility-box {
+    margin-top: 50px;
+    text-align: center;
+  }
+  .Possibility-box-list{
+    padding-left: 0;
+  }
+  .Possibility-box li{
+    padding: 10px 0;
+  }
+
 }
 
 @media screen and (max-width:1000px) {
@@ -729,6 +749,16 @@ h2::after{
 
 @media screen and (max-width:550px) {
   .skill-list li i {
+    font-size: 9.09vw;
+    
+  }
+  .profile h2 {
+    font-size: 10.82vw;
+  }
+  .Possibility h3{
+    font-size: 9.09vw;
+  }
+  .skill h3{
     font-size: 9.09vw;
   }
 }
@@ -904,6 +934,7 @@ h2::after{
 }
 
 .sw-btn a {
+  position: relative;
   display: inline-block;
   text-transform: uppercase;
   padding: 5px 10px;
@@ -913,6 +944,36 @@ h2::after{
   margin: 5px 15px;
   font-size: 16px;
   white-space: nowrap;
+}
+.sw-btn a::before{
+  content: '';
+  position: absolute;
+  left: 0%;
+  transform: translateX(-50%);
+  bottom: 3px;
+  width: 0px;
+  height: 2px;
+  background-color: #5fa4e8;
+  transition: all 0.3s ease-in-out;
+}
+.sw-btn a::after{
+  content: '';
+  position: absolute;
+  right: 0%;
+  transform: translateX(50%);
+  bottom: 0;
+  width: 0px;
+  height: 2px;
+  background-color: #5fa4e8;
+  transition: all 0.6s ease-out;
+}
+.sw-btn a:hover::before{
+  left: 50%;
+  width: 75px;
+}
+.sw-btn a:hover::after{
+  right: 50%;
+  width: 75px;
 }
 .sw-btn a i{
   margin: 0 3px;
@@ -956,6 +1017,13 @@ h2::after{
   .sw-btn a {
     font-size: 2.04vw;
   }
+}
+@media screen and (max-width:550px) {
+
+  .portfolio h2 {
+    font-size: 10.82vw;
+  }
+
 }
 
 .life {
