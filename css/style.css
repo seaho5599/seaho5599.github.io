@@ -273,6 +273,7 @@ h2::after{
   display: block;
   height: 1000px;
   /* overflow-y: hidden; */
+  background: #fcfcfc;
 }
 
 .visual .inner {
@@ -288,27 +289,29 @@ h2::after{
   height: 800px;
 
 }
-/* .text_box{ */
-  /* font-size: 2rem; */
-  /* text-align: center; */
-/* } */
-/* .visual-title{
-
+.text_box{
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.visual-title{
+  font-size: 32px;
+  font-weight: 600;
+}
+.visual-title span{
+  display: block;
+  margin: 20px 0;
+  letter-spacing: 1.3px;
+}
+.visual-title span strong{
+  font-weight: 800;
+  color: #5fa4e8;
+  letter-spacing: 1.3px;
 }
 
-.blink {
-  animation: blink 0.5s infinite;
-  font-size: 2.5rem;
-}
-
-@keyframes blink {
-  to {
-    opacity: 0;
-  }
-} */
 .visual-img{
   display: block;
-  width: 50%;
+  width: 100%;
 }
 .visual-icon {
   display: flex;
