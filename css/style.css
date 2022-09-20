@@ -1,6 +1,6 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Acme&family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Prompt:wght@200;300;400&display=swap');
 
 * {
   margin: 0;
@@ -29,7 +29,7 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans KR','Acme', Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
+  font-family: 'Noto Sans KR','Acme','Prompt', Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.4;
@@ -1029,11 +1029,13 @@ h2::after{
 .life {
   position: relative;
   display: block;
+  background: #f5f7f9;
 }
 
 .life .inner {
   position: relative;
   display: block;
+  padding: 80px 0;
 }
 
 .life .inner h2 {
@@ -1041,39 +1043,89 @@ h2::after{
   font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 50px;
 }
 
-.about {}
-
-.about-list {
-  display: flex;
-  padding: 80px 0;
-}
-
-.about-list li {
-  padding: 0 20px;
-}
-
-.about-list img {}
-
-.about-left {
-  margin-top: 100px;
-}
-
-.about-center {}
-
-.about-right {
-  margin-top: 100px;
-}
-
-.about-txt {
+.life-box {
   position: relative;
   display: block;
-  width: 400px;
-  height: 400px;
-  background: #fff;
-  border: 2px solid #999;
+}
 
+.life-box-list {
+  position: relative;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.life-box-list li {
+  position: relative;
+  display: block;
+  width: 350px;
+  height: 370px;
+  padding: 10px;
+  background: #fff;
+  margin: 20px;
+}
+
+.life-box-1{
+  transform:scale(0.8, 0.8) rotate(5deg);
+}
+.life-box-1:hover{
+  transform: scale(1, 1) rotate(0deg);
+  transition: all 0.35s;
+}
+.life-box-2{
+  transform:scale(0.8, 0.8) rotate(-5deg);
+}
+.life-box-2:hover{
+  transform: scale(1, 1) rotate(0deg);
+  transition: all 0.35s;
+}
+.life-box-3{
+  transform:scale(0.8, 0.8) rotate(4deg);
+}
+.life-box-3:hover{
+  transform: scale(1, 1) rotate(0deg);
+  transition: all 0.35s;
+}
+.life-box-4{
+  transform:scale(0.8, 0.8) rotate(5deg);
+}
+.life-box-4:hover{
+  transform: scale(1, 1) rotate(0deg);
+  transition: all 0.35s;
+}
+.life-box-5{
+  transform:scale(0.8, 0.8) rotate(-5deg);
+}
+.life-box-5:hover{
+  transform: scale(1, 1) rotate(0deg);
+  transition: all 0.35s;
+}
+.life-box-6{
+  transform:scale(0.8, 0.8) rotate(4deg);
+}
+.life-box-6:hover{
+  transform: scale(1, 1) rotate(0deg);
+  transition: all 0.35s;
+}
+.life-box-txt{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.life-box-txt img {
+  width: 100%;
+  height: 300px;
+}
+.life-box-txt span {
+  padding-top: 16px;
+  text-align: center;
+  font-family: 'Prompt';
 }
 
 .contact {
