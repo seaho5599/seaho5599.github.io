@@ -29,7 +29,7 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans KR','Acme','Prompt', Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
+  font-family: 'Noto Sans KR', 'Acme', 'Prompt', Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.4;
@@ -52,7 +52,9 @@ body {
   max-width: 1300px;
   margin: 0 auto;
 }
+.gotopbox{
 
+}
 .gotop {
   position: fixed;
   right: 20px;
@@ -74,6 +76,9 @@ body {
 }
 
 @media screen and (max-width:950px) {
+  .gotopbox{
+    display: none;
+  }
   .gotop {
     display: none;
   }
@@ -84,16 +89,18 @@ body {
   display: block;
   margin-left: 260px;
   overflow-x: hidden;
-  
+
 }
-h2{
+
+h2 {
   text-align: center;
   text-transform: uppercase;
   font-family: 'Acme';
   letter-spacing: 3px;
   /* color: hsl(0, 0%, 13%); */
 }
-h2::after{
+
+h2::after {
   content: '';
   position: absolute;
   left: 50%;
@@ -107,7 +114,7 @@ h2::after{
 
 
 .mb-menu {
-  position: fixed;  
+  position: fixed;
   top: 25px;
   right: 25px;
   display: block;
@@ -162,6 +169,18 @@ h2::after{
 @media screen and (max-width:600px) {
   .mb-menu {
     opacity: 1;
+  }
+}
+@media screen and (max-width:500px) {
+  .mb-menu-list li a{
+    padding: 5px 1.04vw;
+    
+    margin: 0 0.35vw;
+  }
+}
+@media screen and (max-width:350px) {
+  .mb-menu-list li a{
+    font-size: 4.57vw;
   }
 }
 
@@ -281,7 +300,8 @@ h2::after{
   display: flex;
   flex-direction: column;
 }
-.visual-top{
+
+.visual-top {
   position: relative;
   display: flex;
   align-items: center;
@@ -289,37 +309,42 @@ h2::after{
   height: 800px;
 
 }
-.text_box{
+
+.text_box {
   position: relative;
   display: block;
   width: 100%;
 }
-.visual-title{
+
+.visual-title {
   font-size: 32px;
   font-weight: 600;
 }
-.visual-title span{
+
+.visual-title span {
   display: block;
   margin: 20px 0;
   letter-spacing: 1.3px;
 }
-.visual-title span strong{
+
+.visual-title span strong {
   font-weight: 800;
   color: #5fa4e8;
   letter-spacing: 1.3px;
 }
 
-.visual-img{
+.visual-img {
   display: block;
   width: 100%;
 }
+
 .visual-icon {
   display: flex;
   justify-content: center;
 }
 
 .visual-icon li {
-  padding: 0 50px;
+  padding: 10px 50px;
 }
 
 .visual-icon li a {
@@ -353,22 +378,33 @@ h2::after{
   .visual {
     position: relative;
     display: block;
-    height: 91.74vw;
+    height: 1000px;
   }
 
-  .visual h2 {
-    height: 73.39vw;
+  .visual-title {
+    font-size: 2.66vw;
+
   }
 }
-
-@media screen and (max-width:880px) {
-  .visual-icon li {
-    padding: 0 5.68vw;
-  }
+@media screen and (max-width:1000px) {
   .visual-top{
+    flex-direction: column-reverse;
+  }
 
-    /* height: 90.90vw; */
+}
+@media screen and (max-width:770px) {
+  .visual-icon li{
+    padding: 10px 6.49vw;
+  }
   
+}
+@media screen and (max-width:600px) {
+  .visual-icon li{
+    padding: 10px 6.49vw;
+  }
+  .visual-title{
+    text-align: center;
+    transition: all 0.3 ease;
   }
 }
 
@@ -392,6 +428,7 @@ h2::after{
   font-size: 32px;
   font-weight: 700;
 }
+
 .profile-header {
   display: flex;
   margin: 100px 0;
@@ -411,7 +448,7 @@ h2::after{
   margin-bottom: 20px;
   font-weight: 600;
   white-space: nowrap;
-  
+
 }
 
 .profile-box h3 strong {
@@ -439,22 +476,27 @@ h2::after{
   font-weight: 600;
   color: #1c3154;
 }
-.experience{
+
+.experience {
   margin-top: 15px;
 }
-.experience h3{
+
+.experience h3 {
   font-size: 20px;
   margin-bottom: 0;
-  
+
 }
-.experience p{
+
+.experience p {
   padding: 12px 0;
 }
-.experience strong{
+
+.experience strong {
   color: #1c3154;
   font-weight: 600;
 }
-.experience p span{
+
+.experience p span {
   font-size: 14px;
   font-weight: 400;
   padding-right: 20px;
@@ -478,16 +520,18 @@ h2::after{
   font-family: 'Acme';
 }
 
-.Possibility > p {
+.Possibility>p {
   position: relative;
   display: block;
   width: 100%;
 }
-.Possibility-inner{
+
+.Possibility-inner {
   position: relative;
   display: flex;
   /* flex-wrap: wrap; */
 }
+
 .Possibility-box {
   position: relative;
   display: block;
@@ -505,26 +549,31 @@ h2::after{
 }
 
 .Possibility-box-list li {}
-.Possibility-box-list li img{
+
+.Possibility-box-list li img {
   display: inline-block;
   width: 40px;
-  
+
 }
 
 .Possibility-box-list li .Possibility-box-title {
   display: inline-block;
   font-size: 22px;
 }
-.Possibility-1{
+
+.Possibility-1 {
   color: #ffd950;
 }
-.Possibility-2{
+
+.Possibility-2 {
   color: #02bc77;
 }
-.Possibility-3{
+
+.Possibility-3 {
   color: #28c3d7;
 }
-.Possibility-4{
+
+.Possibility-4 {
   color: #FF6384;
 }
 
@@ -633,23 +682,27 @@ h2::after{
 }
 
 @media screen and (max-width:1549px) {
-  .profile-header img{
+  .profile-header img {
     height: 53.74vw;
   }
 }
+
 @media screen and (max-width:1465px) {
   .profile-box .profile-txt {
     font-size: 1.09vw;
   }
-  .profile-header img{
+
+  .profile-header img {
     height: 54.74vw;
   }
 }
+
 @media screen and (max-width:1440px) {
-  .Possibility-box-txt{
+  .Possibility-box-txt {
     font-size: 1.11vw;
   }
 }
+
 @media screen and (max-width:1325px) {
   .profile-header img {
     margin-right: 5.55vw;
@@ -660,27 +713,33 @@ h2::after{
     font-size: 2.11vw;
   }
 
-  .profile-box .profile-txt { 
+  .profile-box .profile-txt {
     line-height: 1.3;
 
   }
+
   .experience p span {
     font-size: 1.06px;
   }
+
   .experience p {
-    font-size: 1.51px ;
+    font-size: 1.51px;
   }
-  .Possibility-inner{
-  flex-direction: column-reverse;
+
+  .Possibility-inner {
+    flex-direction: column-reverse;
   }
+
   .Possibility-box {
     margin-top: 50px;
     text-align: center;
   }
-  .Possibility-box-list{
+
+  .Possibility-box-list {
     padding-left: 0;
   }
-  .Possibility-box li{
+
+  .Possibility-box li {
     padding: 10px 0;
   }
 
@@ -720,19 +779,21 @@ h2::after{
 
   }
 
-  .experience h3{
+  .experience h3 {
     font-size: 20px;
     margin-bottom: 0;
   }
-  .experience p{
+
+  .experience p {
     font-size: 1.6vw;
     padding-left: 5vw;
   }
-  .experience p span{
+
+  .experience p span {
     font-size: 1.4vw;
   }
-  
-  
+
+
 }
 
 @media screen and (max-width:620px) {
@@ -753,16 +814,34 @@ h2::after{
 @media screen and (max-width:550px) {
   .skill-list li i {
     font-size: 9.09vw;
-    
+
   }
+
   .profile h2 {
     font-size: 10.82vw;
   }
-  .Possibility h3{
+
+  .Possibility h3 {
     font-size: 9.09vw;
   }
-  .skill h3{
+
+  .skill h3 {
     font-size: 9.09vw;
+  }
+  .skill-list li span{
+    font-size: 3.3vw;  
+  }
+}
+@media screen and (max-width:500px) {
+  .profile-header img{
+    width: 100vw;
+  }
+  .profile-box .profile-txt {
+    font-size: 2.3vw;
+  }
+  .profile-box .profile-txt strong {
+    font-size: 3.2vw;
+
   }
 }
 
@@ -876,7 +955,8 @@ h2::after{
   transition: all 0.3s ease;
   border-right: 1px dotted rgba(0, 0, 0, 0.09);
 }
-.protfolio-clone:nth-child(2n){
+
+.protfolio-clone:nth-child(2n) {
   border-right: 0;
 }
 
@@ -893,12 +973,14 @@ h2::after{
   transition: all 0.5s ease-in-out;
   /* z-index: 99; */
 }
-.clone-ex{
+
+.clone-ex {
   position: relative;
   display: block;
   margin: 10px 0;
 }
-.clone-ex p{
+
+.clone-ex p {
   text-align: center;
   font-size: 16px;
   line-height: 1.7;
@@ -948,7 +1030,8 @@ h2::after{
   font-size: 16px;
   white-space: nowrap;
 }
-.sw-btn a::before{
+
+.sw-btn a::before {
   content: '';
   position: absolute;
   left: 0%;
@@ -959,7 +1042,8 @@ h2::after{
   background-color: #5fa4e8;
   transition: all 0.3s ease-in-out;
 }
-.sw-btn a::after{
+
+.sw-btn a::after {
   content: '';
   position: absolute;
   right: 0%;
@@ -970,17 +1054,21 @@ h2::after{
   background-color: #5fa4e8;
   transition: all 0.6s ease-out;
 }
-.sw-btn a:hover::before{
+
+.sw-btn a:hover::before {
   left: 50%;
   width: 75px;
 }
-.sw-btn a:hover::after{
+
+.sw-btn a:hover::after {
   right: 50%;
   width: 75px;
 }
-.sw-btn a i{
+
+.sw-btn a i {
   margin: 0 3px;
 }
+
 @media screen and (max-width:1480px) {
   .protfolio-clone {
     width: calc(100% / 2);
@@ -1021,14 +1109,32 @@ h2::after{
     font-size: 2.04vw;
   }
 }
+
 @media screen and (max-width:550px) {
 
   .portfolio h2 {
     font-size: 10.82vw;
   }
-
+  .sw-txt a img{
+    width: 300.28px;
+    height: 290.22px;
+  }
 }
-
+@media screen and (max-width:400px){
+  .sw-txt h5{
+    font-size: 5vw;
+  }
+  .clone-ex p{
+    font-size: 4vw;
+  }
+}
+@media screen and (max-width:360px){
+  .portfolio-btn button{
+    padding: 5vw 2.78vw;
+    font-size: 5vw;
+    margin: 0 2.78vw;
+  }
+}
 .life {
   position: relative;
   display: block;
@@ -1061,74 +1167,135 @@ h2::after{
   justify-content: space-evenly;
   width: 100%;
   height: 100%;
-  
+
 }
 
 .life-box-list li {
   position: relative;
   display: block;
-  width: 350px;
-  height: 370px;
+  width: 26.92vw;
+  height: 28.2vw;
   padding: 10px;
   background: #fff;
   margin: 20px;
 }
 
-.life-box-1{
-  transform:scale(0.8, 0.8) rotate(5deg);
+.life-box-1 {
+  transform: scale(0.8, 0.8) rotate(5deg);
 }
-.life-box-1:hover{
+
+.life-box-1:hover {
   transform: scale(1, 1) rotate(0deg);
   transition: all 0.35s;
 }
-.life-box-2{
-  transform:scale(0.8, 0.8) rotate(-5deg);
+
+.life-box-2 {
+  transform: scale(0.8, 0.8) rotate(-5deg);
 }
-.life-box-2:hover{
+
+.life-box-2:hover {
   transform: scale(1, 1) rotate(0deg);
   transition: all 0.35s;
 }
-.life-box-3{
-  transform:scale(0.8, 0.8) rotate(4deg);
+
+.life-box-3 {
+  transform: scale(0.8, 0.8) rotate(4deg);
 }
-.life-box-3:hover{
+
+.life-box-3:hover {
   transform: scale(1, 1) rotate(0deg);
   transition: all 0.35s;
 }
-.life-box-4{
-  transform:scale(0.8, 0.8) rotate(5deg);
+
+.life-box-4 {
+  transform: scale(0.8, 0.8) rotate(5deg);
 }
-.life-box-4:hover{
+
+.life-box-4:hover {
   transform: scale(1, 1) rotate(0deg);
   transition: all 0.35s;
 }
-.life-box-5{
-  transform:scale(0.8, 0.8) rotate(-5deg);
+
+.life-box-5 {
+  transform: scale(0.8, 0.8) rotate(-5deg);
 }
-.life-box-5:hover{
+
+.life-box-5:hover {
   transform: scale(1, 1) rotate(0deg);
   transition: all 0.35s;
 }
-.life-box-6{
-  transform:scale(0.8, 0.8) rotate(4deg);
+
+.life-box-6 {
+  transform: scale(0.8, 0.8) rotate(4deg);
 }
-.life-box-6:hover{
+
+.life-box-6:hover {
   transform: scale(1, 1) rotate(0deg);
   transition: all 0.35s;
 }
-.life-box-txt{
+
+.life-box-txt {
   position: relative;
   display: flex;
   flex-direction: column;
 }
+
 .life-box-txt img {
   width: 100%;
-  height: 300px;
+  height: 23.08vw;
 }
+
 .life-box-txt span {
   padding-top: 16px;
   text-align: center;
   font-family: 'Prompt';
+}
+@media screen and (max-width:1000px) {
+  .life-box-list{
+    flex-direction: column;
+    align-items: center;
+  }
+  .life-box-list li{
+    width: 50vw;
+    height: 60vw;
+  }
+  .life-box-txt img{
+    height: 50vw;
+  }
+  .life-box-1 {
+    transform: scale(0.8, 0.8) rotate(0);
+  }
+
+  .life-box-2 {
+    transform: scale(0.8, 0.8) rotate(0);
+  }
+
+  .life-box-3 {
+    transform: scale(0.8, 0.8) rotate(0);
+  }
+  
+  .life-box-4 {
+    transform: scale(0.8, 0.8) rotate(0);
+  }
+  
+  .life-box-5 {
+    transform: scale(0.8, 0.8) rotate(0);
+  }
+  
+
+  .life-box-6 {
+    transform: scale(0.8, 0.8) rotate(0);
+  }
+  
+}
+@media screen and (max-width:600px) {
+  .life-box-list li{
+    width: 65vw;
+    height: 70vw;
+  }
+  .life-box-txt img{
+    height: 65vw;
+  }
 }
 
 .contact {
@@ -1144,15 +1311,17 @@ h2::after{
   position: relative;
   display: block;
 }
-.contact h2{
+
+.contact h2 {
   position: relative;
   font-size: 32px;
   font-weight: 700;
 }
+
 .footer {
   position: relative;
   display: block;
- 
+
 }
 
 .footer .inner {
@@ -1160,7 +1329,8 @@ h2::after{
   display: block;
   width: 100%;
 }
-.f-logo{
+
+.f-logo {
   position: absolute;
   top: 0;
   left: 50%;
@@ -1169,29 +1339,50 @@ h2::after{
   text-align: center;
   width: 150px;
 }
-.footer-box{
+
+.footer-box {
   position: relative;
   display: block;
   width: 100%;
   padding-top: 150px;
 }
-.footer-box-list{
+
+.footer-box-list {
   display: flex;
   width: 100%;
   justify-content: center;
 }
-.footer-box-list li{
+
+.footer-box-list li {
   margin: 20px 20px;
 }
-.footer-box-list li a{}
-.footer-box-list li a img{
+
+.footer-box-list li a {}
+
+.footer-box-list li a img {
   display: block;
   width: 40px;
   height: 40px;
 }
-.copy{
+
+.copy {
   text-align: center;
   font-size: 14px;
   color: #333;
   padding: 30px 0;
+}
+@media screen and (max-width:300px) {
+  .footer-box{
+    padding-top: 50vw;
+  }
+  .f-logo{
+    width: 50vw;
+  }
+  .footer-box-list li a img{
+    width: 13.33vw;
+    height: 13.33vw;
+  }
+  .copy{
+    font-size: 4.67vw;
+  }
 }
