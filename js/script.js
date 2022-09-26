@@ -123,7 +123,7 @@ $(document).ready(function () {
     } else {
       $(".go-life").removeClass("gnbfocus");
     }
-    if (temp >= 10610) {
+    if (temp >= 10810) {
       $(".go-life").removeClass("gnbfocus");
       $(".go-contact").addClass("gnbfocus");
     } else {
@@ -143,6 +143,7 @@ $(document).ready(function () {
       },
       800
     );
+    mbHide();
   });
   $(".go-profile").click(function () {
     let offset = $("#profile").offset();
@@ -152,6 +153,7 @@ $(document).ready(function () {
       },
       800
     );
+    mbHide();
   });
   $(".go-protfolio").click(function () {
     let offset = $("#portfolio").offset();
@@ -161,6 +163,7 @@ $(document).ready(function () {
       },
       800
     );
+    mbHide();
   });
   $(".go-life").click(function () {
     let offset = $("#life").offset();
@@ -170,6 +173,7 @@ $(document).ready(function () {
       },
       800
     );
+    mbHide();
   });
   $(".go-contact").click(function () {
     let offset = $("#contact").offset();
@@ -179,6 +183,7 @@ $(document).ready(function () {
       },
       800
     );
+    mbHide();
   });
 
   // let section = $(".section");
@@ -197,16 +202,25 @@ $(document).ready(function () {
   //   });
   // });
 
-  let mbMenu = $(".mb-menu");
-  mbMenu.click(function () {
-    mbMenu.toggleClass("mb-menu-click");
+  let mbMenuBtn = $(".mb-btn");
+  let mbDim = $(".mb-dim");
+  mbMenuBtn.click(function () {
+    mbMenuBtn.toggleClass("mb-btn-click");
     $(".mb-menu-list").toggleClass("mb-menu-list-click");
+    mbDim.toggleClass("mb-dim-click");
+  });
+  let mbHide = () => {
+    mbMenuBtn.removeClass("mb-btn-click");
+    $(".mb-menu-list").removeClass("mb-menu-list-click");
+    mbDim.removeClass("mb-dim-click");
+  };
+  mbDim.click(function () {
+    mbHide();
   });
   $(window).resize(function () {
     let wW = $(window).width();
     if (wW < 600) {
-      mbMenu.removeClass("mb-menu-click");
-      $(".mb-menu-list").removeClass("mb-menu-list-click");
+      mbHide();
     }
   });
   // 스크롤 적용
