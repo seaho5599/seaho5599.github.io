@@ -36,8 +36,8 @@ window.onload = function () {
   // canvas.height = height;
   let dataset = {
     label: "가능성그래프",
-    backgroundColor: ["#ffd950", "#02bc77", "#28c3d7", "#FF6384"], //라벨별 컬러설정
-    borderColor: "#22252B",
+    backgroundColor: ["#aec8e2", "#8bbaea", "#6699cc", "#3473b2"], //라벨별 컬러설정
+    borderColor: "#5fa4e8 ",
     data: [90, 85, 95, 98],
   };
 
@@ -54,9 +54,10 @@ window.onload = function () {
       responsive: true,
       maintainAspectRatio: false, //true 하게 되면 캔버스 width,height에 따라 리사이징된다.
       legend: {
-        position: "top",
+        position: "bottom",
         fontColor: "black",
         align: "center",
+        paddingTop: "10px",
         display: true,
         fullWidth: true,
         labels: {
