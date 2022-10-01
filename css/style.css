@@ -1035,7 +1035,14 @@ h2::after {
   transition: all 0.2s ease-in;
   filter: grayscale(0.8);
 }
-
+.mini-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
 .protfolio-clone:hover .sw-txt a img {
   box-shadow: 12px 22px 32px 6px rgba(94, 94, 105, 0.25),
     0 8px 16px -8px rgba(94, 94, 105, 0.3),
@@ -1043,7 +1050,9 @@ h2::after {
   /* filter: brightness(0.8); */
   filter: grayscale(0);
 }
-
+.protfolio-clone:hover .mini-hover {
+  opacity: 0;
+}
 .sw-btn {
   position: relative;
   display: block;
