@@ -55,12 +55,45 @@ body {
 }
 
 .gotopbox {
-}
-
-.gotop {
   position: fixed;
   right: 20px;
   bottom: 50px;
+  display: block;
+  z-index: 9999;
+}
+.gotopbox button {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+
+  border: 0;
+  /* background: transparent; */
+  margin-bottom: 20px;
+}
+.go-info,
+.go-pdf {
+  background: transparent;
+}
+.go-info a,
+.go-pdf a {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+.gotopbox button:last-child {
+  margin-bottom: 0;
+}
+.gotopbox button a {
+  display: block;
+}
+.gotopbox button a img {
+  display: block;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+.gotop {
   display: block;
   width: 50px;
   height: 50px;
@@ -68,15 +101,33 @@ body {
   border-radius: 15px;
   border: 0;
   transition: 0.2s ease-in;
-  z-index: 9999;
 }
 
 .gotop:hover {
   background: #4c4c4c;
   color: #e5e5e5;
 }
+.info-submenu {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  display: none;
+  margin-top: 5px;
+  transition: left 0.3s ease-in-out;
+}
+.info-submenu a {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+.info-submenu a img {
+  width: 100%;
+  height: 100%;
+}
 
 @media screen and (max-width: 950px) {
+  .go-info,
+  .go-pdf,
   .gotopbox {
     display: none;
   }
@@ -296,7 +347,30 @@ h2::after {
 .gnb > li > a:active {
   transform: scale(0.8);
 }
-
+.submenu {
+  position: absolute;
+  left: -95%;
+  transform: translateX(-50%);
+  bottom: -6px;
+  display: block;
+  opacity: 0;
+  z-index: 9;
+  transition: all 0.5s ease-in;
+}
+.submenu li {
+}
+.submenu li a {
+  font-size: 14px;
+  color: #888;
+  font-weight: 500;
+}
+.possibility-hover:hover .submenu {
+  left: 50%;
+  opacity: 1;
+}
+.submenu > li:hover .go-possibility {
+  color: #5fa4e8;
+}
 @media screen and (max-width: 900px) {
   .header {
     width: 28.89vw;
@@ -493,6 +567,7 @@ h2::after {
   width: 500px;
   height: 500px;
   margin-right: 100px;
+  margin-top: 16px;
   transition: all 0.3s ease;
 }
 
@@ -518,15 +593,19 @@ h2::after {
   font-weight: 600;
   color: #1c3154;
 }
-
-.experience {
+.profile-bottom {
+  display: flex;
   margin-top: 52px;
 }
-
-.experience > h4 {
+.profile-bottom h4 {
   font-size: 20px;
   margin-bottom: 0;
   font-weight: 700;
+}
+.experience {
+}
+
+.experience > h4 {
 }
 
 .experience p {
@@ -542,6 +621,13 @@ h2::after {
   font-size: 14px;
   font-weight: 400;
   padding-right: 20px;
+}
+.experience strong em {
+  display: block;
+  margin-left: 75px;
+}
+.mbti {
+  margin-left: 10px;
 }
 
 .Possibility {
@@ -919,7 +1005,7 @@ h2::after {
   transition: 0.2s ease-in;
   cursor: pointer;
   border: 2px solid #d1d5d8;
-  /* border-radius: 15px 15px 0 15px; */
+  border-radius: 15px 0;
   color: #424242;
   font-family: "Acme";
 }
@@ -955,7 +1041,7 @@ h2::after {
 }
 
 .study:focus {
-  background: #e6b10a;
+  background: #cebb7b;
   color: #fff;
   border: 2px solid #d1d5d8;
 }
@@ -964,7 +1050,7 @@ h2::after {
 }
 
 .vue:focus {
-  background: #e6b10a;
+  background: #c4b37b;
   color: #fff;
   border: 2px solid #d1d5d8;
 }
@@ -1006,8 +1092,8 @@ h2::after {
 .sw-txt h5 {
   position: relative;
   text-align: center;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 700;
   margin-bottom: 30px;
   transition: all 0.5s ease-in-out;
   /* z-index: 99; */
@@ -1018,9 +1104,18 @@ h2::after {
   display: block;
   margin: 10px 0;
 }
-
+.clone-ex p::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #5fa4e8;
+  border-radius: 50%;
+  margin-right: 10px;
+}
 .clone-ex p {
-  text-align: center;
+  /* text-align: center; */
   font-size: 16px;
   line-height: 1.7;
 }
@@ -1032,7 +1127,20 @@ h2::after {
   height: 250px;
   margin: 0 auto;
 }
-
+.sw-txt a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(86, 123, 206, 0.6);
+  opacity: 0;
+  transition: all 0.3s ease-in;
+}
+.protfolio-clone:hover .sw-txt a::after {
+  opacity: 1;
+}
 .sw-txt a img {
   width: 100%;
   height: 100%;
@@ -1041,7 +1149,7 @@ h2::after {
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.05),
     0 8px 16px -8px rgba(0, 0, 0, 0.05), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
   transition: all 0.2s ease-in;
-  filter: grayscale(0.8);
+  /* filter: grayscale(0.8); */
 }
 .mini-hover {
   position: absolute;
@@ -1062,25 +1170,32 @@ h2::after {
   opacity: 0;
 }
 .sw-btn {
-  position: relative;
-  display: block;
-  margin-top: 15px;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  margin-top: 20px;
+  opacity: 0;
+  transition: all 0.3s ease-in;
 }
-
+.protfolio-clone:hover .sw-btn {
+  opacity: 1;
+}
 .sw-btn a {
   position: relative;
   display: inline-block;
   text-transform: uppercase;
   padding: 5px 10px;
-  /* background: #d1d5d8; */
-  color: #8a8c93;
-  /* border-radius: 10px; */
+  background: #5fa4e8;
+  color: #fff;
+  border-radius: 10px;
   margin: 5px 15px;
   font-size: 16px;
   white-space: nowrap;
 }
 
-.sw-btn a::before {
+/* .sw-btn a::before {
   content: "";
   position: absolute;
   left: 0%;
@@ -1102,7 +1217,7 @@ h2::after {
   height: 2px;
   background-color: #999;
   transition: all 0.6s ease-out;
-}
+} */
 
 .sw-btn a:hover::before {
   left: 50%;
@@ -1378,7 +1493,7 @@ h2::after {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-51%);
   display: block;
   text-align: center;
   width: 150px;

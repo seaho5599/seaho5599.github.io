@@ -36,12 +36,12 @@ window.onload = function () {
   // canvas.height = height;
   let dataset = {
     label: "가능성그래프",
-    backgroundColor: ["#aec8e2", "#8bbaea", "#6699cc", "#3473b2"], //라벨별 컬러설정
-    borderColor: "#5fa4e8 ",
-    data: [90, 85, 95, 98],
+    backgroundColor: ["#3473b2", "#6699cc", "#8bbaea", "#aec8e2"], //라벨별 컬러설정
+    // borderColor: "#5fa4e8 ",
+    data: [95, 95, 90, 95],
   };
 
-  let labels = ["책임감", "소통능력", "도전정신", "성실함"];
+  let labels = ["성실함", "책임감", "도전정신", "소통능력"];
 
   let datasets = {
     datasets: [dataset],
@@ -57,7 +57,7 @@ window.onload = function () {
         position: "bottom",
         fontColor: "black",
         align: "center",
-        paddingTop: "10px",
+        // marginTop: 100,
         display: true,
         fullWidth: true,
         labels: {
@@ -85,9 +85,13 @@ $(document).ready(function () {
     // console.log(temp)
     if (temp < 400) {
       goTop.stop().hide(200);
-      goTop.removeAttr("style");
+      $(".go-info").stop().hide(200);
+      $(".go-pdf").stop().hide(200);
+      // goTop.removeAttr("style");
     } else {
       goTop.stop().show(200);
+      $(".go-info").stop().show(200);
+      $(".go-pdf").stop().show(200);
     }
     goTop.click(function () {
       $("html").stop().animate(
@@ -96,6 +100,12 @@ $(document).ready(function () {
         },
         1000
       );
+    });
+    let goInfo = $(".go-info");
+    goInfo.click(function (e) {
+      e.preventDefault();
+
+      $(".info-submenu").stop().animate().slideToggle();
     });
   });
 
@@ -107,24 +117,25 @@ $(document).ready(function () {
   // })
   $(window).scroll(function () {
     let temp = $(window).scrollTop();
+    // console.log("🚀 ~ file: script.js ~ line 110 ~ temp", temp);
     if (temp >= 1000) {
       $(".go-profile").addClass("gnbfocus");
     } else {
       $(".go-profile").removeClass("gnbfocus");
     }
-    if (temp >= 3212) {
+    if (temp >= 2968) {
       $(".go-profile").removeClass("gnbfocus");
       $(".go-protfolio").addClass("gnbfocus");
     } else {
       $(".go-protfolio").removeClass("gnbfocus");
     }
-    if (temp >= 9240) {
+    if (temp >= 7022) {
       $(".go-protfolio").removeClass("gnbfocus");
       $(".go-life").addClass("gnbfocus");
     } else {
       $(".go-life").removeClass("gnbfocus");
     }
-    if (temp >= 10810) {
+    if (temp >= 7841) {
       $(".go-life").removeClass("gnbfocus");
       $(".go-contact").addClass("gnbfocus");
     } else {
@@ -186,7 +197,17 @@ $(document).ready(function () {
     );
     mbHide();
   });
-
+  let goPossibility = $(".go-possibility");
+  goPossibility.click(function () {
+    let offset = $("#Possibility").offset();
+    $("html, body").animate(
+      {
+        scrollTop: offset.top,
+      },
+      800
+    );
+    mbHide();
+  });
   // let section = $(".section");
   // $.each(section, function (index, item) {
   //   new Waypoint({

@@ -66,6 +66,25 @@
 
 <body>
   <div class="gotopbox">
+    <button class="go-info"><a href="#">
+      <img src="images/info.png" alt="info">
+    </a>
+    <div class="info-submenu">
+      <a href="https://github.com/seaho5599" target="_blank" class="go-github">
+      <img src="images/github.png" alt="https://github.com/seaho5599">
+      <a href="seaho5599@gmail.com" class="go-email">
+        <img src="images/email2.png" alt="seaho5599@gamil.com">
+      </a>
+      <a href="https://open.kakao.com/o/s8KrhsCe">
+        <img src="images/kakao-talk.png" alt="kakao">
+      </a>
+    </div>
+  </button>
+    <button class="go-pdf">
+      <a href="#">
+        <img src="images/pdf2.png" alt="pdf">
+      </a>
+    </button>
     <button class="gotop">
       <span class="material-symbols-outlined">
         arrow_upward
@@ -91,7 +110,11 @@
       </div>
       <ul class="gnb">
         <li><a href="#home" class="go-home">Home</a></li>
-        <li><a href="#profile" class="go-profile">Profile</a></li>
+        <li class="possibility-hover"><a href="#profile" class="go-profile">Profile</a>
+          <ul class="submenu">
+            <li><a href="#Possibility" class="go-possibility">Possibility & Skill</a></li>
+          </ul>
+        </li>
         <li><a href="#portfolio" class="go-protfolio">Portfolio</a></li>
         <li><a href="#life" class="go-life">Life</a></li>
         <li><a href="#contact" class="go-contact">Contact</a></li>
@@ -144,20 +167,23 @@
               생각합니다.<br>
               디자이너와 백엔드 개발자의 중간의 역활에서 소통의 발판이 되어야 한다고 생각합니다.<br>
               모두가 만족하는 최적의 솔루션을 제공하는 <strong>통창력과 창의력이 있는 개발자</strong>가 되고싶습니다.</p>
-            <div class="experience">
-              <h4>EXPERIENCE</h4>
-              <p><span class="experience-date">2022.10~</span><strong>그린컴퓨터아트학원 Vue활용 프론트엔드 개발자 양성과정 수료</strong></p>
-              <p><span class="experience-date">2020.03~</span>중산 힐링스크린골프장 운영</p>
-              <p><span class="experience-date">2018.04~</span>조은개발 근무</p>
-              <p><span class="experience-date">2017.02~</span>대구대학교 수료</p>
-            </div>
-            <div class="mbti">
-
+            <div class="profile-bottom">
+              <div class="experience">
+                <h4>EXPERIENCE</h4>
+                <p><span class="experience-date">2022.10~</span><strong>그린컴퓨터아트학원<em> Vue활용 프론트엔드 개발자 양성과정 수료</em></strong>
+                </p>
+                <p><span class="experience-date">2020.03~</span>중산 힐링스크린골프장 운영</p>
+                <p><span class="experience-date">2018.04~</span>조은개발 근무</p>
+                <p><span class="experience-date">2017.02~</span>대구대학교 수료</p>
+              </div>
+              <div class="mbti">
+                <h4>MBTI</h4>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="Possibility">
+        <div class="Possibility" id="Possibility">
           <h3>Possibility</h3>
           <div class="Possibility-inner">
             <div class="Possibility-box">
@@ -306,14 +332,14 @@
             <div class="portfolio-wrapper" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
               <div class="protfolio-clone p-personal">
                 <div class="sw-txt">
-                  <h5>하나제약주식회사(PC/Mobile)</h5>
-                  <div class="clone-ex">
-                    <p>제작기간 : 약 6일</p>
-                    <p>사용 프로그램 : HTML5, CSS3, JS, JQUERY</p>
-                  </div>
+                  <h5>하나제약주식회사<br>(PC/Mobile)</h5>
                   <a href="https://seaho5599.github.io/hanaph/" target="_blank">
                     <img src="images/hana.png" alt="https://seaho5599.github.io/hanaph/">
                   </a>
+                </div>
+                <div class="clone-ex">
+                  <p>제작기간 : 약 6일</p>
+                  <p>프로그램 : HTML5 / CSS3 / JS / JQUERY</p>
                 </div>
                 <div class="sw-btn">
                   <a href="https://seaho5599.github.io/hanaph/" target="_blank">
@@ -332,14 +358,15 @@
               </div>
               <div class="protfolio-clone p-personal">
                 <div class="sw-txt">
-                  <h5>정육각(PC/Mobile)</h5>
-                  <div class="clone-ex">
-                    <p>제작기간 : 약 3일</p>
-                    <p>사용 프로그램 : HTML5, CSS3, JS, JQUERY</p>
-                  </div>
+                  <h5>정육각<br>(PC/Mobile)</h5>
+
                   <a href="https://seaho5599.github.io/jeongyookgak/" target="_blank">
                     <img src="images/정육각.png" alt="https://www.jeongyookgak.com/index">
                   </a>
+                </div>
+                <div class="clone-ex">
+                  <p>제작기간 : 약 3일</p>
+                  <p>프로그램 : HTML5, CSS3, JS, JQUERY</p>
                 </div>
                 <div class="sw-btn">
                   <a href="https://seaho5599.github.io/jeongyookgak/" target="_blank">work
@@ -354,14 +381,15 @@
               </div>
               <div class="protfolio-clone p-personal">
                 <div class="sw-txt">
-                  <h5>도미노피자(PC/Mobile)</h5>
-                  <div class="clone-ex">
-                    <p>제작기간 : 약 5일</p>
-                    <p>사용 프로그램 : HTML5, CSS3, JS, JQUERY</p>
-                  </div>
+                  <h5>도미노피자<br>(PC/Mobile)</h5>
+
                   <a href="https://seaho5599.github.io/dominos/" target="_blank">
                     <img src="images/도미노피자.png" alt="https://web.dominos.co.kr/main">
                   </a>
+                </div>
+                <div class="clone-ex">
+                  <p>제작기간 : 약 5일</p>
+                  <p>프로그램 : HTML5, CSS3, JS, JQUERY</p>
                 </div>
                 <div class="sw-btn">
                   <a href="https://seaho5599.github.io/dominos/" target="_blank">work
@@ -375,14 +403,15 @@
               </div>
               <div class="protfolio-clone p-personal">
                 <div class="sw-txt">
-                  <h5>오설록(PC)</h5>
-                  <div class="clone-ex">
-                    <p>제작기간 : 약 5일</p>
-                    <p>사용 프로그램 : HTML5, SCSS, JS, JQUERY</p>
-                  </div>
+                  <h5>오설록<br>(PC)</h5>
+
                   <a href="https://seaho5599.github.io/osulloc/" target="_blank">
                     <img src="images/오설록.png" alt="https://www.osulloc.com/kr/ko">
                   </a>
+                </div>
+                <div class="clone-ex">
+                  <p>제작기간 : 약 5일</p>
+                  <p>프로그램 : HTML5, SCSS, JS, JQUERY</p>
                 </div>
                 <div class="sw-btn">
                   <a href="https://seaho5599.github.io/osulloc/" target="_blank">work
@@ -396,14 +425,15 @@
               </div>
               <div class="protfolio-clone p-study">
                 <div class="sw-txt">
-                  <h5>K-Water(PC/Mobile)</h5>
-                  <div class="clone-ex">
-                    <p>제작기간 : 약 8일</p>
-                    <p>사용 프로그램 : HTML5, CSS3, JS, JQUERY</p>
-                  </div>
+                  <h5>K-Water<br>(PC/Mobile)</h5>
+
                   <a href="https://seaho5599.github.io/K-water/" target="_blank">
                     <img src="images/k-water.png" alt="https://www.kwater.or.kr/main.do?s_mid=1">
                   </a>
+                </div>
+                <div class="clone-ex">
+                  <p>제작기간 : 약 8일</p>
+                  <p>프로그램 : HTML5, CSS3, JS, JQUERY</p>
                 </div>
                 <div class="sw-btn">
                   <a href="https://seaho5599.github.io/K-water/" target="_blank">work
@@ -418,14 +448,15 @@
               </div>
               <div class="protfolio-clone p-study">
                 <div class="sw-txt">
-                  <h5>마시그래이(PC/Mobile/Vue.js)</h5>
-                  <div class="clone-ex">
-                    <p>제작기간 : 약 4일</p>
-                    <p>사용 프로그램 : HTML5, CSS3, JS, JQUERY, VUE.JS</p>
-                  </div>
+                  <h5>마시그래이<br>(PC/Mobile/Vue.js)</h5>
+
                   <a href=" https://seaho5599.github.io/page-mashi/" target="_blank">
                     <img src="images/마시그래이.png" alt="https://www.masigray.com:5021/main/main.asp">
                   </a>
+                </div>
+                <div class="clone-ex">
+                  <p>제작기간 : 약 4일</p>
+                  <p>프로그램 : HTML5, CSS3, JS, JQUERY, VUE.JS</p>
                 </div>
                 <div class="sw-btn">
                   <a href="https://seaho5599.github.io/masigray/" target="_blank">work
@@ -446,14 +477,15 @@
               </div>
               <div class="protfolio-clone p-study">
                 <div class="sw-txt">
-                  <h5>거제청년이룸(PC/Mobile/Vue.js)</h5>
-                  <div class="clone-ex">
-                    <p>제작기간 : 약 5일</p>
-                    <p>사용 프로그램 : HTML5, CSS3, JS, JQUERY, VUE.JS</p>
-                  </div>
+                  <h5>거제청년이룸<br>(PC/Mobile/Vue.js)</h5>
+
                   <a href="https://seaho5599.github.io/page-geoje/" target="_blank">
                     <img src="images/거제청년이룸.png" alt="https://geojeyouth.com/web/">
                   </a>
+                </div>
+                <div class="clone-ex">
+                  <p>제작기간 : 약 5일</p>
+                  <p>프로그램 : HTML5, CSS3, JS, JQUERY, VUE.JS</p>
                 </div>
                 <div class="sw-btn">
                   <a href="https://seaho5599.github.io/geojeyouth/" target="_blank">work
@@ -474,14 +506,15 @@
               </div>
               <div class="protfolio-clone p-study">
                 <div class="sw-txt">
-                  <h5>노엘로힐스(PC/Mobile/Vue.js)</h5>
-                  <div class="clone-ex">
-                    <p>제작기간 : 약 4일</p>
-                    <p>사용 프로그램 : HTML5, SCSS, JS, JQUERY, VUE.JS</p>
-                  </div>
+                  <h5>노엘로힐스<br>(PC/Mobile/Vue.js)</h5>
+
                   <a href="https://seaho5599.github.io/page-noelo/" target="_blank">
                     <img src="images/노엘로힐스.png" alt="사이트명">
                   </a>
+                </div>
+                <div class="clone-ex">
+                  <p>제작기간 : 약 4일</p>
+                  <p>프로그램 : HTML5, SCSS, JS, JQUERY, VUE.JS</p>
                 </div>
                 <div class="sw-btn">
                   <a href="https://seaho5599.github.io/noelohills/" target="_blank">work
@@ -502,14 +535,15 @@
               </div>
               <div class="protfolio-clone p-study">
                 <div class="sw-txt">
-                  <h5>STX건설(PC/Vue.js)</h5>
-                  <div class="clone-ex">
-                    <p>제작기간 : 약 3일</p>
-                    <p>사용 프로그램 : HTML5, CSS3, JS, JQUERY, VUE.JS</p>
-                  </div>
+                  <h5>STX건설<br>(PC/Vue.js)</h5>
+
                   <a href="https://seaho5599.github.io/page-stx/" target="_blank">
                     <img src="images/stx.png" alt="http://www.stxconst.co.kr/">
                   </a>
+                </div>
+                <div class="clone-ex">
+                  <p>제작기간 : 약 3일</p>
+                  <p>프로그램 : HTML5, CSS3, JS, JQUERY, VUE.JS</p>
                 </div>
                 <div class="sw-btn">
                   <a href="https://seaho5599.github.io/stxconst/" target="_blank">work
@@ -529,16 +563,17 @@
               </div>
               <div class="protfolio-clone p-vue">
                 <div class="sw-txt">
-                  <h5>MiniMemo(Vue.js)</h5>
-                  <div class="clone-ex">
-                    <p>제작기간 : 약 5일</p>
-                    <p>사용 프로그램 : HTML5, CSS3, JS, VUE.JS</p>
-                  </div>
+                  <h5>MiniMemo<br>(Vue.js)</h5>
+
                   <a href="https://seaho5599.github.io/page-miniblog/" target="_blank">
-                    <img src="images/miniblog-intro.png" alt="https://seaho5599.github.io/page-miniblog/"
-                      class="mini-hover">
+                    <!-- <img src="images/miniblog-intro.png" alt="https://seaho5599.github.io/page-miniblog/"
+                      class="mini-hover"> -->
                     <img src="images/miniblog.png" alt="https://seaho5599.github.io/page-miniblog/" class="mini-img">
                   </a>
+                </div>
+                <div class="clone-ex">
+                  <p>제작기간 : 약 5일</p>
+                  <p>프로그램 : HTML5, CSS3, JS, VUE.JS</p>
                 </div>
                 <div class="sw-btn">
                   <a href="https://seaho5599.github.io/page-miniblog/" target="_blank">vue work<i
@@ -550,14 +585,15 @@
               </div>
               <div class="protfolio-clone p-vue">
                 <div class="sw-txt">
-                  <h5>TodoApp (Vue.js/RESTFull(jsonServer))</h5>
-                  <div class="clone-ex">
-                    <p>제작기간 : 약 5일</p>
-                    <p>사용 프로그램 : HTML5, CSS3, JS, JQUERY, VUE.JS</p>
-                  </div>
+                  <h5>TodoApp<br>(Vue.js/RESTFull(jsonServer))</h5>
+
                   <a href="#" target="_blank">
                     <img src="images/400x500.png" alt="https://seaho5599.github.io/hanaph/">
                   </a>
+                </div>
+                <div class="clone-ex">
+                  <p>제작기간 : 약 5일</p>
+                  <p>프로그램 : HTML5, CSS3, JS, JQUERY, VUE.JS</p>
                 </div>
                 <div class="sw-btn">
                   <a href="깃허브 Vue.js page주소" target="_blank">vue work<i class="fa-brands fa-vuejs"></i></a>
@@ -569,14 +605,15 @@
               </div>
               <div class="protfolio-clone p-vue">
                 <div class="sw-txt">
-                  <h5>TodoApp (Vue.js/php/MySQL)</h5>
-                  <div class="clone-ex">
-                    <p>제작기간 : 약 5일</p>
-                    <p>사용 프로그램 : HTML5, CSS3, JS, JQUERY, VUE.JS</p>
-                  </div>
+                  <h5>TodoApp<br>(Vue.js/php/MySQL)</h5>
+
                   <a href="#" target="_blank">
                     <img src="images/400x500.png" alt="https://seaho5599.github.io/hanaph/">
                   </a>
+                </div>
+                <div class="clone-ex">
+                  <p>제작기간 : 약 5일</p>
+                  <p>프로그램 : HTML5, CSS3, JS, JQUERY, VUE.JS</p>
                 </div>
                 <div class="sw-btn">
                   <a href="깃허브 Vue.js page주소" target="_blank">vue work<i class="fa-brands fa-vuejs"></i></a>
@@ -588,14 +625,15 @@
               </div>
               <div class="protfolio-clone p-vue">
                 <div class="sw-txt">
-                  <h5>지브리스튜디오 API (Vue.js)</h5>
-                  <div class="clone-ex">
-                    <p>제작기간 : 약 5일</p>
-                    <p>사용 프로그램 : HTML5, CSS3, JS, JQUERY, VUE.JS</p>
-                  </div>
+                  <h5>지브리스튜디오 API<br>(Vue.js)</h5>
+
                   <a href="https://seaho5599.github.io/page-ghibli/" target="_blank">
                     <img src="images/ghibli.png" alt="https://seaho5599.github.io/hanaph/">
                   </a>
+                </div>
+                <div class="clone-ex">
+                  <p>제작기간 : 약 5일</p>
+                  <p>프로그램 : HTML5, CSS3, JS, JQUERY, VUE.JS</p>
                 </div>
                 <div class="sw-btn">
                   <a href="https://seaho5599.github.io/page-ghibli/" target="_blank">vue work<i
