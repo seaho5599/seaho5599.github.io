@@ -105,7 +105,7 @@ $(document).ready(function () {
     goInfo.click(function (e) {
       e.preventDefault();
 
-      $(".info-submenu").stop().animate().slideToggle();
+      // $(".info-submenu").stop().slideToggle();
     });
   });
 
