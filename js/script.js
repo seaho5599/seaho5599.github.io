@@ -109,39 +109,61 @@ $(document).ready(function () {
     });
   });
 
-  // $(window).resize(function(){
-  //   let wW = $(window).width()
-  //   if(wW < 950){
-  //     goTop.removeAttr('style')
-  //   }
-  // })
+  $(window).resize(function () {
+    let wW = $(window).width();
+    if (wW < 950) {
+      goTop.removeAttr("style");
+    }
+  });
   $(window).scroll(function () {
     let temp = $(window).scrollTop();
-    // console.log("🚀 ~ file: script.js ~ line 110 ~ temp", temp);
-    if (temp >= 1000) {
+    // console.log("🚀 ~ file: script.js ~ line 120 ~ temp", temp);
+    if (temp >= 951) {
       $(".go-profile").addClass("gnbfocus");
     } else {
       $(".go-profile").removeClass("gnbfocus");
     }
-    if (temp >= 2968) {
+    if (temp >= 2902) {
       $(".go-profile").removeClass("gnbfocus");
       $(".go-protfolio").addClass("gnbfocus");
     } else {
       $(".go-protfolio").removeClass("gnbfocus");
     }
-    if (temp >= 7022) {
+    if (temp >= 6458) {
       $(".go-protfolio").removeClass("gnbfocus");
       $(".go-life").addClass("gnbfocus");
     } else {
       $(".go-life").removeClass("gnbfocus");
     }
-    if (temp >= 7841) {
+    if (temp >= 7276) {
       $(".go-life").removeClass("gnbfocus");
       $(".go-contact").addClass("gnbfocus");
     } else {
       $(".go-contact").removeClass("gnbfocus");
     }
   });
+  // let section = $("section");
+
+  // $.each(section, function (index, item) {
+  //   new Waypoint({
+  //     element: $(this),
+  //     handler: function (direction) {
+  //       let active = $(this);
+  //       if (direction == "down") {
+  //         active.prev();
+  //         let active_link = $('gnb li a[href="#' + active.attr("id") + '"]');
+  //         console.log(
+  //           "🚀 ~ file: script.js ~ line 155 ~  active_link",
+  //           active_link
+  //         );
+
+  //         gnbLiA.parent().removeClass("gnbfocus");
+  //         active_link.parent().addClass("gnbfocus");
+  //       }
+  //     },
+  //   });
+  // });
+
   // 버튼 이동
   let gnbLiA = $(".gnb > li > a");
   gnbLiA.click(function (e) {
