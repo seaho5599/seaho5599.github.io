@@ -620,16 +620,16 @@ h2::after {
 .experience > h4 {
 }
 
-.experience p {
+.profile-bottom p {
   padding: 12px 0;
 }
 
-.experience strong {
+.profile-bottom strong {
   color: #1c3154;
   font-weight: 600;
 }
 
-.experience p span {
+.profile-bottom p span {
   font-size: 14px;
   font-weight: 400;
   padding-right: 20px;
@@ -639,7 +639,7 @@ h2::after {
   margin-left: 75px;
 }
 .mbti {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .Possibility {
@@ -1413,11 +1413,11 @@ h2::after {
   display: flex;
   flex-direction: column;
 }
-.life-box-txt a {
+.life-box-txt p {
   width: 350px;
 }
 
-.life-box-txt a img {
+.life-box-txt p img {
   width: 100%;
   /* height: 23.08vw; */
 }
