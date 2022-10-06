@@ -425,10 +425,11 @@ h2::after {
   height: 760px;
 }
 
-.text_box {
+.text-box {
   position: relative;
   display: block;
   width: 100%;
+  margin-left: 50px;
 }
 
 .visual-title {
@@ -504,10 +505,6 @@ h2::after {
     display: block;
     height: 1000px;
   }
-
-  .visual-title {
-    font-size: 2.66vw;
-  }
 }
 
 @media screen and (max-width: 1000px) {
@@ -520,6 +517,18 @@ h2::after {
   .visual-icon li {
     padding: 10px 6.49vw;
   }
+  .text-box {
+    margin-left: 5.76vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .visual-title {
+    font-size: 4vw;
+  }
+  .text-strong span {
+    font-size: 4.57vw;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -530,6 +539,12 @@ h2::after {
   .visual-title {
     text-align: center;
     transition: all 0.3 ease;
+  }
+  .text-box {
+    margin-left: 0;
+  }
+  .text-strong {
+    text-align: center;
   }
 }
 
@@ -642,13 +657,13 @@ h2::after {
   margin-left: 20px;
 }
 
-.Possibility {
+.possibility {
   position: relative;
   display: block;
   text-transform: uppercase;
 }
 
-.Possibility h3 {
+.possibility h3 {
   position: relative;
   display: block;
   width: 100%;
@@ -659,26 +674,26 @@ h2::after {
   font-family: "Acme";
 }
 
-.Possibility > p {
+.possibility > p {
   position: relative;
   display: block;
   width: 100%;
 }
 
-.Possibility-inner {
+.possibility-inner {
   position: relative;
   display: flex;
   /* flex-wrap: wrap; */
 }
 
-.Possibility-box {
+.possibility-box {
   position: relative;
   display: block;
   width: 100%;
   /* background: #ddd; */
 }
 
-.Possibility-box-list {
+.possibility-box-list {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -687,36 +702,36 @@ h2::after {
   padding-left: 100px;
 }
 
-.Possibility-box-list li {
+.possibility-box-list li {
 }
 
-.Possibility-box-list li img {
+.possibility-box-list li img {
   display: inline-block;
   width: 40px;
 }
 
-.Possibility-box-list li .Possibility-box-title {
+.possibility-box-list li .possibility-box-title {
   display: inline-block;
   font-size: 22px;
 }
 
-.Possibility-1 {
+.possibility-1 {
   color: #3473b2;
 }
 
-.Possibility-2 {
+.possibility-2 {
   color: #3473b2;
 }
 
-.Possibility-3 {
+.possibility-3 {
   color: #3473b2;
 }
 
-.Possibility-4 {
+.possibility-4 {
   color: #3473b2;
 }
 
-.Possibility-box-list li .Possibility-box-txt {
+.possibility-box-list li .Possibility-box-txt {
   display: block;
   margin-top: 10px;
 }
@@ -820,19 +835,9 @@ h2::after {
   font-weight: 500;
 }
 
-@media screen and (max-width: 1549px) {
-  .profile-header img {
-    height: 53.74vw;
-  }
-}
-
 @media screen and (max-width: 1465px) {
   .profile-box .profile-txt {
     font-size: 1.09vw;
-  }
-
-  .profile-header img {
-    height: 54.74vw;
   }
 }
 
@@ -843,11 +848,17 @@ h2::after {
 }
 
 @media screen and (max-width: 1325px) {
-  .profile-header img {
-    margin-right: 5.55vw;
-    height: 37.74vw;
+  .profile-img {
+    margin-right: 7.55vw;
+    margin-left: 7.55vw;
   }
 
+  @media screen and (max-width: 1114px) {
+    .profile-img {
+      margin-right: 2.55vw;
+      margin-left: 2.55vw;
+    }
+  }
   .profile-box h3 {
     font-size: 2.11vw;
   }
@@ -856,28 +867,28 @@ h2::after {
     line-height: 1.3;
   }
 
-  .experience p span {
+  .profile-bottom p span {
     font-size: 1.06px;
   }
 
-  .experience p {
+  .profile-bottom p {
     font-size: 1.51px;
   }
 
-  .Possibility-inner {
+  .possibility-inner {
     flex-direction: column-reverse;
   }
 
-  .Possibility-box {
+  .possibility-box {
     margin-top: 50px;
     text-align: center;
   }
 
-  .Possibility-box-list {
+  .possibility-box-list {
     padding-left: 0;
   }
 
-  .Possibility-box li {
+  .possibility-box li {
     padding: 10px 0;
   }
 }
@@ -914,17 +925,17 @@ h2::after {
     font-size: 1.8vw;
   }
 
-  .experience h3 {
+  .profile-bottom h3 {
     font-size: 20px;
     margin-bottom: 0;
   }
 
-  .experience p {
+  .profile-bottom p {
     font-size: 1.6vw;
     padding-left: 5vw;
   }
 
-  .experience p span {
+  .profile-bottom p span {
     font-size: 1.4vw;
   }
 }
@@ -1011,7 +1022,6 @@ h2::after {
 
 .portfolio-btn button {
   width: 110px;
-
   margin: 0 10px;
   font-size: 18px;
   background: transparent;

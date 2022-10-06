@@ -221,7 +221,7 @@ $(document).ready(function () {
   });
   let goPossibility = $(".go-possibility");
   goPossibility.click(function () {
-    let offset = $("#Possibility").offset();
+    let offset = $("#possibility").offset();
     $("html, body").animate(
       {
         scrollTop: offset.top,
