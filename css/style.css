@@ -731,7 +731,7 @@ h2::after {
   color: #3473b2;
 }
 
-.possibility-box-list li .Possibility-box-txt {
+.possibility-box-list li .possibility-box-txt {
   display: block;
   margin-top: 10px;
 }
