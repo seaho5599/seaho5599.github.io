@@ -406,7 +406,7 @@ h2::after {
 .visual {
   position: relative;
   display: block;
-  height: 1000px;
+  /* height: 1000px; */
   /* overflow-y: hidden; */
   background: #fcfcfc;
 }
@@ -422,7 +422,7 @@ h2::after {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 760px;
+  /* height: 760px; */
 }
 
 .text-box {
@@ -449,23 +449,34 @@ h2::after {
 .text-strong span {
   font-weight: 800;
   color: #5fa4e8;
-  letter-spacing: 1.3px;
-  font-size: 32px;
+  font-size: 36px;
+  letter-spacing: 4.3px;
+  line-height: 55px;
 }
 .text-strong span strong {
 }
 .visual-img {
-  width: 1000px;
+  /* width: 1000px; */
   overflow: hidden;
+  z-index: 9;
 }
 .visual-img img {
   display: block;
   width: 100%;
 }
+.visual-bg {
+  position: absolute;
+  top: 122px;
+  right: 64px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: #5fa4e8;
+}
 .visual-icon {
   display: flex;
   justify-content: center;
-  padding: 50px 0;
+  padding: 60px 0;
 }
 
 .visual-icon li {
@@ -622,7 +633,7 @@ h2::after {
 }
 .profile-bottom {
   display: flex;
-  margin-top: 52px;
+  margin-top: 40px;
 }
 .profile-bottom h4 {
   font-size: 20px;
@@ -636,7 +647,7 @@ h2::after {
 }
 
 .profile-bottom p {
-  padding: 12px 0;
+  padding: 8px 0;
 }
 
 .profile-bottom strong {
@@ -654,7 +665,7 @@ h2::after {
   margin-left: 75px;
 }
 .mbti {
-  margin-left: 20px;
+  margin-left: 50px;
 }
 
 .possibility {
@@ -707,12 +718,13 @@ h2::after {
 
 .possibility-box-list li img {
   display: inline-block;
-  width: 40px;
+  width: 30px;
+  padding-bottom: 12px;
 }
 
 .possibility-box-list li .possibility-box-title {
   display: inline-block;
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .possibility-1 {
@@ -733,7 +745,8 @@ h2::after {
 
 .possibility-box-list li .possibility-box-txt {
   display: block;
-  margin-top: 10px;
+  /* margin-top: 10px; */
+  padding-left: 35px;
 }
 
 .canvas-box {
@@ -775,13 +788,22 @@ h2::after {
   text-align: center;
   width: calc(100% / 6);
   padding: 10px 0;
-  /* height: 100px; */
 }
 
 .skill-list li i {
   font-size: 50px;
 }
-
+.skill-list li:nth-child(5) i {
+  /* font-size: 56px; */
+}
+.skill-list li:nth-child(10) {
+  padding-top: 20px;
+  padding-bottom: 0;
+}
+.skill-list li:nth-child(10) div {
+  padding-top: 1px;
+  padding-bottom: 0;
+}
 .html5 {
   color: #f56141;
 }
