@@ -103,8 +103,7 @@ $(document).ready(function () {
     });
     let goInfo = $(".go-info");
     goInfo.click(function (e) {
-      e.preventDefault();
-
+      // e.preventDefault();
       // $(".info-submenu").stop().slideToggle();
     });
   });
