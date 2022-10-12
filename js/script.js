@@ -122,7 +122,7 @@ $(document).ready(function () {
     } else {
       $(".go-profile").removeClass("gnbfocus");
     }
-    if (temp >= 2902) {
+    if (temp >= 2878) {
       $(".go-profile").removeClass("gnbfocus");
       $(".go-protfolio").addClass("gnbfocus");
     } else {
