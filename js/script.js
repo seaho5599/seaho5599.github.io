@@ -38,7 +38,7 @@ window.onload = function () {
     label: "가능성그래프",
     backgroundColor: ["#3473b2", "#6699cc", "#8bbaea", "#aec8e2"], //라벨별 컬러설정
     // borderColor: "#5fa4e8 ",
-    data: [95, 95, 90, 95],
+    data: [95, 85, 90, 90],
   };
 
   let labels = ["성실함", "책임감", "도전정신", "소통능력"];
