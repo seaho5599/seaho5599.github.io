@@ -510,6 +510,12 @@ h2::after {
   background-size: cover;
 }
 
+@media screen and (max-width: 1400px) {
+  .visual-bg {
+    width: 42.86vw;
+    height: 42.86vw;
+  }
+}
 @media screen and (max-width: 1090px) {
   .visual {
     position: relative;
