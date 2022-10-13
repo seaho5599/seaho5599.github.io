@@ -511,16 +511,28 @@ h2::after {
 }
 
 @media screen and (max-width: 1400px) {
+  .text-box {
+    margin-left: 3.57vw;
+  }
   .visual-bg {
+    right: 0.57vw;
     width: 42.86vw;
     height: 42.86vw;
+    transition: right 0.3s ease;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .visual-title {
+    font-size: 1.92vw;
+  }
+  .text-strong span {
+    font-size: 2.28vw;
   }
 }
 @media screen and (max-width: 1090px) {
   .visual {
     position: relative;
     display: block;
-    height: 1000px;
   }
 }
 
@@ -528,11 +540,30 @@ h2::after {
   .visual-top {
     flex-direction: column-reverse;
   }
+  .visual-bg {
+    right: 64px;
+    width: 60vw;
+    height: 60vw;
+  }
+  .visual-title {
+    font-size: 28px;
+    text-align: center;
+  }
+  .text-strong {
+    text-align: center;
+  }
+  .text-strong span {
+    font-size: 36px;
+  }
 }
 
 @media screen and (max-width: 770px) {
   .visual-icon li {
     padding: 10px 6.49vw;
+  }
+  .visual-img img {
+    width: 75%;
+    margin: 0 auto;
   }
   .text-box {
     margin-left: 5.76vw;
