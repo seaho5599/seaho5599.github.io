@@ -558,6 +558,11 @@ h2::after {
 }
 
 @media screen and (max-width: 770px) {
+  .visual-bg {
+    right: 64px;
+    width: 55vw;
+    height: 55vw;
+  }
   .visual-icon li {
     padding: 10px 6.49vw;
   }
@@ -568,18 +573,28 @@ h2::after {
   .text-box {
     margin-left: 5.76vw;
   }
+  .visual-title {
+    font-size: 24px;
+  }
+
+  .text-strong span {
+    font-size: 32px;
+  }
 }
 
 @media screen and (max-width: 700px) {
   .visual-title {
-    font-size: 4vw;
+    font-size: 6vw;
   }
   .text-strong span {
-    font-size: 4.57vw;
+    font-size: 8vw;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .visual-bg {
+    display: none;
+  }
   .visual-icon li {
     padding: 10px 6.49vw;
   }
@@ -592,7 +607,20 @@ h2::after {
     margin-left: 0;
   }
   .text-strong {
-    text-align: center;
+    margin-top: 15px;
+  }
+  .visual-title span {
+    margin: 10px 0;
+  }
+
+  .text-strong span {
+    line-height: 29px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .visual-icon li a {
+    width: 11.43vw;
+    height: 11.43vw;
   }
 }
 
@@ -914,8 +942,7 @@ h2::after {
 
   @media screen and (max-width: 1114px) {
     .profile-img {
-      margin-right: 2.55vw;
-      margin-left: 2.55vw;
+      margin: 0 auto;
     }
   }
   .profile-box h3 {
@@ -991,14 +1018,18 @@ h2::after {
 
   .profile-bottom p {
     font-size: 1.6vw;
-    padding-left: 5vw;
+    padding-left: 2vw;
   }
 
   .profile-bottom p span {
     font-size: 1.4vw;
   }
 }
-
+@media screen and (max-width: 700px) {
+  .profile h3 {
+    font-size: 3.6vw;
+  }
+}
 @media screen and (max-width: 620px) {
   .profile-box h3 {
     font-size: 4.5vw;
@@ -1246,7 +1277,6 @@ h2::after {
   box-shadow: 12px 22px 32px 6px rgba(94, 94, 105, 0.25),
     0 8px 16px -8px rgba(94, 94, 105, 0.3),
     0 -6px 16px -6px rgba(94, 94, 105, 0.025);
-  /* filter: brightness(0.8); */
   filter: grayscale(0);
 }
 .protfolio-clone:hover .mini-hover {
@@ -1277,31 +1307,6 @@ h2::after {
   font-size: 16px;
   white-space: nowrap;
 }
-
-/* .sw-btn a::before {
-  content: "";
-  position: absolute;
-  left: 0%;
-  transform: translateX(-50%);
-  bottom: 3px;
-  width: 0px;
-  height: 2px;
-  background-color: #999;
-  transition: all 0.3s ease-in-out;
-}
-
-.sw-btn a::after {
-  content: "";
-  position: absolute;
-  right: 0%;
-  transform: translateX(50%);
-  bottom: 0;
-  width: 0px;
-  height: 2px;
-  background-color: #999;
-  transition: all 0.6s ease-out;
-} */
-
 .sw-btn a:hover::before {
   left: 50%;
   width: 75px;
@@ -1350,6 +1355,10 @@ h2::after {
     width: 57.69vw;
     height: 52.95vw;
     font-size: 2.04vw;
+  }
+  .sw-btn a {
+    padding: 3px 5px;
+    font-size: 15px;
   }
 }
 
