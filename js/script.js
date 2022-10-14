@@ -1,13 +1,13 @@
 window.onload = function () {
   AOS.init();
-  lightbox.option({
-    resizeDuration: 200,
-    wrapAround: true,
-    positionFromTop: 200,
-    disableScrolling: true,
-    maxWidth: "800px",
-    maxHeight: "800px",
-  });
+  // lightbox.option({
+  //   resizeDuration: 200,
+  //   wrapAround: true,
+  //   positionFromTop: 200,
+  //   disableScrolling: true,
+  //   maxWidth: "800px",
+  //   maxHeight: "800px",
+  // });
 
   //   const content = "안녕하세요!! \n 저의 포토폴리오의 오신 걸 \n 환영합니다.";
   //   const text = document.querySelector(".visual-title");
